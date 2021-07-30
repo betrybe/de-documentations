@@ -1,0 +1,1374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>saga.source package &mdash; Saga  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="saga.source.extractor package" href="saga.source.extractor.html" />
+    <link rel="prev" title="saga package" href="saga.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Saga
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="home.html">Saga: Modularization and Ease of Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sink.html">Sink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration and Use</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Specification</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="saga.html">saga package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="saga.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">saga.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.sink.html">saga.sink package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.utils.html">saga.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="saga.html#module-saga">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Saga</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API Specification</a> &raquo;</li>
+        
+          <li><a href="saga.html">saga package</a> &raquo;</li>
+        
+      <li>saga.source package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/saga.source.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="saga-source-package">
+<h1>saga.source package<a class="headerlink" href="#saga-source-package" title="Permalink to this headline">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="saga.source.extractor.html">saga.source.extractor package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="saga.source.extractor.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="saga.source.extractor.ga.html">saga.source.extractor.ga package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="saga.source.extractor.ga.html#module-saga.source.extractor.ga.anonymous_id_extractor">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.source.extractor.ga.html#module-saga.source.extractor.ga">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="saga.source.extractor.hubspot.html">saga.source.extractor.hubspot package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="saga.source.extractor.hubspot.html#module-saga.source.extractor.hubspot.companies">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.source.extractor.hubspot.html#module-saga.source.extractor.hubspot">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="saga.source.extractor.mindsight.html">saga.source.extractor.mindsight package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="saga.source.extractor.mindsight.html#module-saga.source.extractor.mindsight.logic">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.source.extractor.mindsight.html#module-saga.source.extractor.mindsight">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="saga.source.extractor.typeform.html">saga.source.extractor.typeform package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="saga.source.extractor.typeform.html#module-saga.source.extractor.typeform.form_responses">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.source.extractor.typeform.html#module-saga.source.extractor.typeform">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="saga.source.extractor.html#module-saga.source.extractor.extractor">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="saga.source.extractor.html#module-saga.source.extractor">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="module-saga.source.ga_source">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-saga.source.ga_source" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="saga.source.ga_source.GASource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.ga_source.</span></code><code class="sig-name descname"><span class="pre">GASource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.ga_source.GASource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Google Analytics API</p>
+<dl class="py attribute">
+<dt id="saga.source.ga_source.GASource.ga_client">
+<code class="sig-name descname"><span class="pre">ga_client</span></code><a class="headerlink" href="#saga.source.ga_source.GASource.ga_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Google Analytics API client, generated with the google
+api SDK.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.ga_source.GASource.view_id">
+<code class="sig-name descname"><span class="pre">view_id</span></code><a class="headerlink" href="#saga.source.ga_source.GASource.view_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>GA view id, located on the admin console.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.ga_source.GASource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.ga_source.GASource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used. Must be one of
+the names in the extractor factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.ga_source.GASource.data_source_name">
+<code class="sig-name descname"><span class="pre">data_source_name</span></code><a class="headerlink" href="#saga.source.ga_source.GASource.data_source_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided, changes the “data_source” key from the
+default extractor name to the name provided, changing the write location of
+the results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.ga_source.GASource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.ga_source.GASource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor keyword arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.ga_source.GASource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.ga_source.GASource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extracted data from the API</p>
+<dl class="field-list">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>Dictionary containing the data and additional metadata.</dt><dd><p>Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.hubspot_source"></span><dl class="py class">
+<dt id="saga.source.hubspot_source.HubspotSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.hubspot_source.</span></code><code class="sig-name descname"><span class="pre">HubspotSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.hubspot_source.HubspotSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Hubspot API</p>
+<dl class="py attribute">
+<dt id="saga.source.hubspot_source.HubspotSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.hubspot_source.HubspotSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.hubspot_source.HubspotSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.hubspot_source.HubspotSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.hubspot_source.HubspotSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.hubspot_source.HubspotSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used. Must be one of
+the names in the extractor factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.hubspot_source.HubspotSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.hubspot_source.HubspotSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor keyword arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.hubspot_source.HubspotSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.hubspot_source.HubspotSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extracted data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.mindsight_source"></span><dl class="py class">
+<dt id="saga.source.mindsight_source.MindsightSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.mindsight_source.</span></code><code class="sig-name descname"><span class="pre">MindsightSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.mindsight_source.MindsightSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Mindsight API</p>
+<dl class="py attribute">
+<dt id="saga.source.mindsight_source.MindsightSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.mindsight_source.MindsightSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url used for the requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.mindsight_source.MindsightSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.mindsight_source.MindsightSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.mindsight_source.MindsightSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.mindsight_source.MindsightSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.mindsight_source.MindsightSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.mindsight_source.MindsightSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor extra arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.mindsight_source.MindsightSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.mindsight_source.MindsightSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extract data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.typeform_source"></span><dl class="py class">
+<dt id="saga.source.typeform_source.TypeformSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.typeform_source.</span></code><code class="sig-name descname"><span class="pre">TypeformSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.typeform_source.TypeformSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Typeform API</p>
+<dl class="py attribute">
+<dt id="saga.source.typeform_source.TypeformSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.typeform_source.TypeformSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url used for the requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.typeform_source.TypeformSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.typeform_source.TypeformSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.typeform_source.TypeformSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.typeform_source.TypeformSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.typeform_source.TypeformSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.typeform_source.TypeformSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor extra arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.typeform_source.TypeformSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.typeform_source.TypeformSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extract data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.source"></span><dl class="py class">
+<dt id="saga.source.source.Source">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.source.</span></code><code class="sig-name descname"><span class="pre">Source</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.source.Source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds the interface for the Source objects.</p>
+<dl class="py method">
+<dt id="saga.source.source.Source.produce">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.source.Source.produce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-saga.source">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-saga.source" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="saga.source.BuzzmonitorSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">BuzzmonitorSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.BuzzmonitorSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Buzzmonitor API</p>
+<dl class="py attribute">
+<dt id="saga.source.BuzzmonitorSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.BuzzmonitorSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url used for the requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.BuzzmonitorSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.BuzzmonitorSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.BuzzmonitorSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.BuzzmonitorSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.BuzzmonitorSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.BuzzmonitorSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor extra arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.BuzzmonitorSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.BuzzmonitorSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extract data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.GASource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">GASource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_source_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.GASource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Google Analytics API</p>
+<dl class="py attribute">
+<dt id="saga.source.GASource.ga_client">
+<code class="sig-name descname"><span class="pre">ga_client</span></code><a class="headerlink" href="#saga.source.GASource.ga_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Google Analytics API client, generated with the google
+api SDK.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GASource.view_id">
+<code class="sig-name descname"><span class="pre">view_id</span></code><a class="headerlink" href="#saga.source.GASource.view_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>GA view id, located on the admin console.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GASource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.GASource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used. Must be one of
+the names in the extractor factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GASource.data_source_name">
+<code class="sig-name descname"><span class="pre">data_source_name</span></code><a class="headerlink" href="#saga.source.GASource.data_source_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>If provided, changes the “data_source” key from the
+default extractor name to the name provided, changing the write location of
+the results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GASource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.GASource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor keyword arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.GASource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.GASource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extracted data from the API</p>
+<dl class="field-list">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>Dictionary containing the data and additional metadata.</dt><dd><p>Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.GSSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">GSSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gs_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tab_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">credentials</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.GSSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Google Spreadsheets API</p>
+<dl class="py attribute">
+<dt id="saga.source.GSSource.gs_id">
+<code class="sig-name descname"><span class="pre">gs_id</span></code><a class="headerlink" href="#saga.source.GSSource.gs_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to Google Spreadsheets ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GSSource.tab_name">
+<code class="sig-name descname"><span class="pre">tab_name</span></code><a class="headerlink" href="#saga.source.GSSource.tab_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to Spreadsheets Tab.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GSSource.credentials">
+<code class="sig-name descname"><span class="pre">credentials</span></code><a class="headerlink" href="#saga.source.GSSource.credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference to credentials path localized on ‘s3 bucket’, to
+authorize google requests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GSSource.table_name">
+<code class="sig-name descname"><span class="pre">table_name</span></code><a class="headerlink" href="#saga.source.GSSource.table_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Table name that will return data_source to organize on S3</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GSSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.GSSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used. It must be the name
+that is in the extractors factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.GSSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.GSSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor keyword arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.GSSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.GSSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extracted data from the API</p>
+<dl class="field-list">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>Dictionary containing the data and additional metadata.</dt><dd><p>Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.HackerRankSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">HackerRankSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.HackerRankSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from HackerRank API</p>
+<dl class="py attribute">
+<dt id="saga.source.HackerRankSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.HackerRankSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url used for the requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.HackerRankSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.HackerRankSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.HackerRankSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.HackerRankSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.HackerRankSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.HackerRankSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor extra arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.HackerRankSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.HackerRankSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extract data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.HubspotSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">HubspotSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.HubspotSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Hubspot API</p>
+<dl class="py attribute">
+<dt id="saga.source.HubspotSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.HubspotSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.HubspotSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.HubspotSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.HubspotSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.HubspotSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used. Must be one of
+the names in the extractor factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.HubspotSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.HubspotSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor keyword arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.HubspotSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.HubspotSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extracted data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.MindsightSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">MindsightSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.MindsightSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Mindsight API</p>
+<dl class="py attribute">
+<dt id="saga.source.MindsightSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.MindsightSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url used for the requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.MindsightSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.MindsightSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.MindsightSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.MindsightSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.MindsightSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.MindsightSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor extra arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.MindsightSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.MindsightSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extract data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.SlackSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">SlackSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.SlackSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Slack API</p>
+<dl class="py attribute">
+<dt id="saga.source.SlackSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.SlackSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url used for the requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.SlackSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.SlackSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.SlackSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.SlackSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.SlackSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.SlackSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor extra arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.SlackSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.SlackSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extract data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.TypeformSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">TypeformSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.TypeformSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Typeform API</p>
+<dl class="py attribute">
+<dt id="saga.source.TypeformSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.TypeformSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url used for the requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.TypeformSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.TypeformSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.TypeformSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.TypeformSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.TypeformSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.TypeformSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor extra arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.TypeformSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.TypeformSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extract data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.ZendeskSource">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.</span></code><code class="sig-name descname"><span class="pre">ZendeskSource</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extractor_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bulk</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.ZendeskSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#saga.source.source.Source" title="saga.source.source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.source.Source</span></code></a></p>
+<p>Class to extract data from Zendesk API</p>
+<dl class="py attribute">
+<dt id="saga.source.ZendeskSource.base_url">
+<code class="sig-name descname"><span class="pre">base_url</span></code><a class="headerlink" href="#saga.source.ZendeskSource.base_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base API url used for the requests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.ZendeskSource.token">
+<code class="sig-name descname"><span class="pre">token</span></code><a class="headerlink" href="#saga.source.ZendeskSource.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>API authorization token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.ZendeskSource.extractor_name">
+<code class="sig-name descname"><span class="pre">extractor_name</span></code><a class="headerlink" href="#saga.source.ZendeskSource.extractor_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the data extractor to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="saga.source.ZendeskSource.bulk">
+<code class="sig-name descname"><span class="pre">bulk</span></code><a class="headerlink" href="#saga.source.ZendeskSource.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract data in batches if True and single records if
+False. Defaults to False.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">\*\*extractor_args</span></code></dt>
+<dd><p>Extractor extra arguments to be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="saga.source.ZendeskSource.produce">
+<code class="sig-name descname"><span class="pre">produce</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.ZendeskSource.produce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the extract data from the API</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Dictionary containing the data and additional metadata.
+Data from the API is contained in key “data”, name of the
+source API is in “source_api” key, name of the API data
+source that is being extracted is in key “data_source”
+and the date that the record was extracted and produced
+is in “produce_date” key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="saga.source.extractor.html" class="btn btn-neutral float-right" title="saga.source.extractor package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="saga.html" class="btn btn-neutral float-left" title="saga package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

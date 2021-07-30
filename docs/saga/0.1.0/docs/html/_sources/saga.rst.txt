@@ -1,0 +1,20 @@
+saga package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   saga.source
+   saga.sink
+   saga.utils
+
+Module contents
+---------------
+
+.. automodule:: saga
+   :members:
+   :undoc-members:
+   :show-inheritance:

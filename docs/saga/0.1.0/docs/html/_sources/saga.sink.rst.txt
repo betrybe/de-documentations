@@ -1,0 +1,23 @@
+saga.sink package
+===========================
+
+Submodules
+----------
+
+.. automodule:: saga.sink.sink
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.sink.s3sink
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: saga.sink
+   :members:
+   :undoc-members:
+   :show-inheritance:

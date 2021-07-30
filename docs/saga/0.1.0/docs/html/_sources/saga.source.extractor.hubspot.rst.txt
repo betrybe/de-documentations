@@ -1,0 +1,43 @@
+saga.source.extractor.hubspot package
+===============================================
+
+Submodules
+----------
+
+.. automodule:: saga.source.extractor.hubspot.companies
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.hubspot.contact_identity_profiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.hubspot.contact_lists
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.hubspot.contacts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.hubspot.deals
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.hubspot.extractor_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: saga.source.extractor.hubspot
+   :members:
+   :undoc-members:
+   :show-inheritance:

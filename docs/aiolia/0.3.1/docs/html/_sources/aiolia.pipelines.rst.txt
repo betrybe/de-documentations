@@ -1,0 +1,33 @@
+aiolia.pipelines package
+========================
+
+Submodules
+----------
+
+.. automodule:: aiolia.pipelines.etl_pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.pipelines.migration_pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.pipelines.pipeline_creator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.pipelines.pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: aiolia.pipelines
+   :members:
+   :undoc-members:
+   :show-inheritance:

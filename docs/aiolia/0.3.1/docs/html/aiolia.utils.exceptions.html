@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>aiolia.utils.exceptions package &mdash; Aiolia 0.2.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aiolia.utils.graph package" href="aiolia.utils.graph.html" />
+    <link rel="prev" title="aiolia.utils.decorators package" href="aiolia.utils.decorators.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Aiolia
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Specification</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aiolia.html">aiolia package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aiolia.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aiolia.components.html">aiolia.components package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aiolia.pipelines.html">aiolia.pipelines package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="aiolia.utils.html">aiolia.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aiolia.html#module-aiolia">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Aiolia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API Specification</a> &raquo;</li>
+        
+          <li><a href="aiolia.html">aiolia package</a> &raquo;</li>
+        
+          <li><a href="aiolia.utils.html">aiolia.utils package</a> &raquo;</li>
+        
+      <li>aiolia.utils.exceptions package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/aiolia.utils.exceptions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="aiolia-utils-exceptions-package">
+<h1>aiolia.utils.exceptions package<a class="headerlink" href="#aiolia-utils-exceptions-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-aiolia.utils.exceptions.graph">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-aiolia.utils.exceptions.graph" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt id="aiolia.utils.exceptions.graph.InvalidDirectionException">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.exceptions.graph.</span></code><code class="sig-name descname"><span class="pre">InvalidDirectionException</span></code><a class="headerlink" href="#aiolia.utils.exceptions.graph.InvalidDirectionException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Used when a component directs to an invalid component (e.g., Sink to a
+Source).</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="aiolia.utils.exceptions.graph.MissingEndpointException">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.exceptions.graph.</span></code><code class="sig-name descname"><span class="pre">MissingEndpointException</span></code><a class="headerlink" href="#aiolia.utils.exceptions.graph.MissingEndpointException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Used when Sources or Sinks are missing in the graph construction</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="aiolia.utils.exceptions.graph.NotDAGException">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.exceptions.graph.</span></code><code class="sig-name descname"><span class="pre">NotDAGException</span></code><a class="headerlink" href="#aiolia.utils.exceptions.graph.NotDAGException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Used when the created graph needs to be a DAG but has one or more cycles.</p>
+</dd></dl>
+
+<span class="target" id="module-aiolia.utils.exceptions.pipeline"></span><dl class="py exception">
+<dt id="aiolia.utils.exceptions.pipeline.InvalidDirectionDefinitionException">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.exceptions.pipeline.</span></code><code class="sig-name descname"><span class="pre">InvalidDirectionDefinitionException</span></code><a class="headerlink" href="#aiolia.utils.exceptions.pipeline.InvalidDirectionDefinitionException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Raised when the string describing the directions doesn’t match the correct
+pattern.</p>
+</dd></dl>
+
+<span class="target" id="module-aiolia.utils.exceptions.sql"></span><dl class="py exception">
+<dt id="aiolia.utils.exceptions.sql.InvalidSchema">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.exceptions.sql.</span></code><code class="sig-name descname"><span class="pre">InvalidSchema</span></code><a class="headerlink" href="#aiolia.utils.exceptions.sql.InvalidSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Raised if no schema is provided or if there is a difference between schemas.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="aiolia.utils.exceptions.sql.InvalidTablesException">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.exceptions.sql.</span></code><code class="sig-name descname"><span class="pre">InvalidTablesException</span></code><a class="headerlink" href="#aiolia.utils.exceptions.sql.InvalidTablesException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</section>
+<section id="module-aiolia.utils.exceptions">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aiolia.utils.exceptions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="aiolia.utils.graph.html" class="btn btn-neutral float-right" title="aiolia.utils.graph package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="aiolia.utils.decorators.html" class="btn btn-neutral float-left" title="aiolia.utils.decorators package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

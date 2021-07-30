@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Configuration and Use &mdash; Saga  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Specification" href="modules.html" />
+    <link rel="prev" title="Sink" href="sink.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Saga
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="home.html">Saga: Modularization and Ease of Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sink.html">Sink</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration and Use</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-from-the-repo">Downloading From the Repo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manually-generating-the-wheel">Manually Generating the Wheel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-package">Using the Package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Specification</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Saga</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Configuration and Use</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/configuration.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="configuration-and-use">
+<h1>Configuration and Use<a class="headerlink" href="#configuration-and-use" title="Permalink to this headline">¶</a></h1>
+<p>To use this project, you need to install in your Python env and code the desired “source -&gt; sink” pipeline. The best option is to download it directly from the git repository, but manually cloning it and generating the installation wheel is also an alternative.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<section id="downloading-from-the-repo">
+<h3>Downloading From the Repo<a class="headerlink" href="#downloading-from-the-repo" title="Permalink to this headline">¶</a></h3>
+<p>Downloading directly from the repo requires a deploy key, so that’s a must have to do this method. With the deploy key configured, simply run on your machine, server or docker:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install git+ssh://git@github.com/betrybe/saga.git@master
+</pre></div>
+</div>
+<p>That’s it! Now you can import it on your scripts.</p>
+</section>
+<section id="manually-generating-the-wheel">
+<h3>Manually Generating the Wheel<a class="headerlink" href="#manually-generating-the-wheel" title="Permalink to this headline">¶</a></h3>
+<p>Another solution is to manually generate the wheel. To do this, clone the repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/betrybe/saga
+</pre></div>
+</div>
+<p>Enter the repo folder and generate the wheel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd saga/
+$ make build
+</pre></div>
+</div>
+<p>Now the wheel will be located on the <code class="docutils literal notranslate"><span class="pre">dist/</span></code> folder, at the project root folder. With this, install the package using the generated wheel and, since the wheel name will be based on project version, substitute the “version” keyword with the correct version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install dist/saga-&lt;version&gt;-py3-none-any.whl
+</pre></div>
+</div>
+</section>
+</section>
+<section id="using-the-package">
+<h2>Using the Package<a class="headerlink" href="#using-the-package" title="Permalink to this headline">¶</a></h2>
+<p>To use this package to create and schedule the desired extraction pipeline, it’s needed to connect the <code class="docutils literal notranslate"><span class="pre">Source</span></code> and <code class="docutils literal notranslate"><span class="pre">Sink</span></code> objects to generate the pipe. An example is the use of the <code class="docutils literal notranslate"><span class="pre">Source</span></code> class named <code class="docutils literal notranslate"><span class="pre">HubspotSource</span></code> and the <code class="docutils literal notranslate"><span class="pre">Sink</span></code> class named <code class="docutils literal notranslate"><span class="pre">S3Sink</span></code>, a simple pipe to extract the data from the <code class="docutils literal notranslate"><span class="pre">companies</span></code> endpoint of the source and ingest it to a S3 bucket would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">saga.source</span> <span class="kn">import</span> <span class="n">HubspotSource</span>
+<span class="kn">from</span> <span class="nn">saga.sink</span> <span class="kn">import</span> <span class="n">S3Sink</span>
+
+<span class="n">hubspot</span> <span class="o">=</span> <span class="n">HubspotSource</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">extractor</span><span class="o">=</span><span class="s2">&quot;companies&quot;</span><span class="p">)</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">S3Sink</span><span class="p">()</span>
+
+<span class="n">s3</span><span class="o">.</span><span class="n">consume</span><span class="p">(</span><span class="n">hubspot</span><span class="o">.</span><span class="n">produce</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>That’s it, if all credentials are provided correctly, this code will run until there is no more data to be extracted from the API endpoint.</p>
+<p>Because of the use of generators to produce and consume, the instantiation process is simple and easy to use. Another thing to notice is, every <code class="docutils literal notranslate"><span class="pre">Source</span></code> derived class will obligatory have the <code class="docutils literal notranslate"><span class="pre">produce()</span></code> method that yields a generator with the extracted data and metadata, and every <code class="docutils literal notranslate"><span class="pre">Sink</span></code> derived class will obligatory have a <code class="docutils literal notranslate"><span class="pre">consume()</span></code> method to iterate over the generator and ingest the data on a destination.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="modules.html" class="btn btn-neutral float-right" title="API Specification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sink.html" class="btn btn-neutral float-left" title="Sink" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+aiolia.utils.decorators package
+===============================
+
+Submodules
+----------
+
+.. automodule:: aiolia.utils.decorators.container
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: aiolia.utils.decorators
+   :members:
+   :undoc-members:
+   :show-inheritance:

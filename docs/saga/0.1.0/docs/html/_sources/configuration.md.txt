@@ -1,0 +1,54 @@
+# Configuration and Use
+
+To use this project, you need to install in your Python env and code the desired "source -> sink" pipeline. The best option is to download it directly from the git repository, but manually cloning it and generating the installation wheel is also an alternative.
+
+## Installation
+
+### Downloading From the Repo
+
+Downloading directly from the repo requires a deploy key, so that's a must have to do this method. With the deploy key configured, simply run on your machine, server or docker:
+
+```
+$ pip install git+ssh://git@github.com/betrybe/saga.git@master
+```
+
+That's it! Now you can import it on your scripts.
+
+### Manually Generating the Wheel
+
+Another solution is to manually generate the wheel. To do this, clone the repo:
+
+```
+$ git clone https://github.com/betrybe/saga
+```
+
+Enter the repo folder and generate the wheel:
+
+```
+$ cd saga/
+$ make build
+```
+
+Now the wheel will be located on the `dist/` folder, at the project root folder. With this, install the package using the generated wheel and, since the wheel name will be based on project version, substitute the "version" keyword with the correct version:
+
+```
+$ pip install dist/saga-<version>-py3-none-any.whl
+```
+
+## Using the Package
+
+To use this package to create and schedule the desired extraction pipeline, it's needed to connect the `Source` and `Sink` objects to generate the pipe. An example is the use of the `Source` class named `HubspotSource` and the `Sink` class named `S3Sink`, a simple pipe to extract the data from the `companies` endpoint of the source and ingest it to a S3 bucket would look like this:
+
+```python
+from saga.source import HubspotSource
+from saga.sink import S3Sink
+
+hubspot = HubspotSource(base_url=base_url, token=token, extractor="companies")
+s3 = S3Sink()
+
+s3.consume(hubspot.produce())
+```
+
+That's it, if all credentials are provided correctly, this code will run until there is no more data to be extracted from the API endpoint.
+
+Because of the use of generators to produce and consume, the instantiation process is simple and easy to use. Another thing to notice is, every `Source` derived class will obligatory have the `produce()` method that yields a generator with the extracted data and metadata, and every `Sink` derived class will obligatory have a `consume()` method to iterate over the generator and ingest the data on a destination.

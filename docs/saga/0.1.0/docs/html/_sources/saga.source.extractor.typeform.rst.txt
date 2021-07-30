@@ -1,0 +1,23 @@
+saga.source.extractor.typeform package
+================================================
+
+Submodules
+----------
+
+.. automodule:: saga.source.extractor.typeform.form_responses
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.typeform.extractor_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: saga.source.extractor.typeform
+   :members:
+   :undoc-members:
+   :show-inheritance:

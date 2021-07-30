@@ -1,0 +1,18 @@
+saga.utils.s3_utils package
+=====================================
+
+Submodules
+----------
+
+.. automodule:: saga.utils.s3_utils.s3actions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: saga.utils.s3_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

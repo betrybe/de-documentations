@@ -1,0 +1,709 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>saga.source.extractor.hubspot package &mdash; Saga  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="saga.source.extractor.mindsight package" href="saga.source.extractor.mindsight.html" />
+    <link rel="prev" title="saga.source.extractor.ga package" href="saga.source.extractor.ga.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Saga
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="home.html">Saga: Modularization and Ease of Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sink.html">Sink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration and Use</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Specification</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="saga.html">saga package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="saga.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="saga.source.html">saga.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.sink.html">saga.sink package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.utils.html">saga.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="saga.html#module-saga">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Saga</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API Specification</a> &raquo;</li>
+        
+          <li><a href="saga.html">saga package</a> &raquo;</li>
+        
+          <li><a href="saga.source.html">saga.source package</a> &raquo;</li>
+        
+          <li><a href="saga.source.extractor.html">saga.source.extractor package</a> &raquo;</li>
+        
+      <li>saga.source.extractor.hubspot package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/saga.source.extractor.hubspot.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="saga-source-extractor-hubspot-package">
+<h1>saga.source.extractor.hubspot package<a class="headerlink" href="#saga-source-extractor-hubspot-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-saga.source.extractor.hubspot.companies">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-saga.source.extractor.hubspot.companies" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="saga.source.extractor.hubspot.companies.CompaniesExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.companies.</span></code><code class="sig-name descname"><span class="pre">CompaniesExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'hs_lastmodifieddate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archived</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.companies.CompaniesExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “companies/” endpoint of the API.
+This endpoint contains the data of all companies collected by the CRM API.
+Since this endpoint supports filtering, it’s possible to use the field
+“hs_lastmodifieddate” to get only the most recent events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>start_date</strong> (<em>date</em>) – Start period to query results (closed interval).
+Defaults to “1970-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>date</em>) – End period to query results (open interval).
+Defaults to current day.</p></li>
+<li><p><strong>sort_key</strong> (<em>str</em>) – Property name to order results. Defaults to
+“hs_lastmodifieddate”.</p></li>
+<li><p><strong>archived</strong> (<em>bool</em>) – Whether to query archived deals or not. Defaults to False.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 100, if a</p></li>
+<li><p><strong>value is provided</strong><strong>, </strong><strong>a 400 status code is returned. Because of this</strong><strong>,</strong> (<em>higher</em>) – </p></li>
+<li><p><strong>limit is capped at 100</strong><strong>, </strong><strong>even if more than 100 is passed.</strong> (<em>this</em>) – Defaults to 300.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.companies.CompaniesExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.companies.CompaniesExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is company data.
+First, makes a GET request to retrieve all possible properties of the
+“companies” object and than uses them to retrieve the companies data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.extractor.hubspot.contact_identity_profiles"></span><dl class="py class">
+<dt id="saga.source.extractor.hubspot.contact_identity_profiles.ContactIdentityProfilesExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.contact_identity_profiles.</span></code><code class="sig-name descname"><span class="pre">ContactIdentityProfilesExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">250</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.contact_identity_profiles.ContactIdentityProfilesExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “contacts/v1/lists/all/contacts/all”
+endpoint of the API. This endpoint contains the data of all contacts identity
+profiles collected by the CRM API. Since this endpoint does not support filtering,
+every day all data is extracted for later use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 250, if a
+higher value is provided, the API simply ignores this limit and uses 250
+instead. Defaults to 250.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.contact_identity_profiles.ContactIdentityProfilesExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.contact_identity_profiles.ContactIdentityProfilesExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is the contact details with it’s identity profiles.
+Makes a GET request with pagination to get all the data. The pagination works
+using the keys “has-more” and “vid-offset” yielded in the API response, where
+the “has-more” key indicates if there is a next page to be requested and the
+“vid-offset” key is used on the next request to get the next result page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.extractor.hubspot.contact_lists"></span><dl class="py class">
+<dt id="saga.source.extractor.hubspot.contact_lists.ContactListsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.contact_lists.</span></code><code class="sig-name descname"><span class="pre">ContactListsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">250</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.contact_lists.ContactListsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “contacts/v1/lists/” endpoint of
+the API. This endpoint contains the data of all contact lists collected by the
+CRM API. Since this endpoint does not support filtering, every day all data is
+extracted for later use. To filter only new records from this endpoint, it’s
+possible to use the fields “updatedAt”, “metaData.lastProcessingStateChangeAt”
+and “metaData.lastSizeChangeAt”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 250, if a
+higher value is provided, the API simply ignores this limit and uses 250
+instead. Defaults to 250.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.contact_lists.ContactListsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.contact_lists.ContactListsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is contact list.
+Makes a GET request with pagination to get all the data. The pagination works
+using the keys “has-more” and “offset” yielded in the API response, where the
+“has-more” key indicates if there is a next page to be requested and the
+“offset” key is used on the next request to get the next result page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.extractor.hubspot.contacts"></span><dl class="py class">
+<dt id="saga.source.extractor.hubspot.contacts.ContactsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.contacts.</span></code><code class="sig-name descname"><span class="pre">ContactsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'lastmodifieddate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archived</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.contacts.ContactsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “contacts/” endpoint of the API.
+This endpoint contains the data of all contacts collected by the CRM API.
+Since this endpoint supports filtering, it’s possible to use the field
+“lastmodifieddate” to get only the most recent events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>start_date</strong> (<em>date</em>) – Start period to query results (closed interval).
+Defaults to “1970-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>date</em>) – End period to query results (open interval).
+Defaults to current day.</p></li>
+<li><p><strong>sort_key</strong> (<em>str</em>) – Property name to order results. Defaults to
+“lastmodifieddate”.</p></li>
+<li><p><strong>archived</strong> (<em>bool</em>) – Whether to query archived deals or not. Defaults to False.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 100, if a</p></li>
+<li><p><strong>value is provided</strong><strong>, </strong><strong>a 400 status code is returned. Because of this</strong><strong>,</strong> (<em>higher</em>) – </p></li>
+<li><p><strong>limit is capped at 100</strong><strong>, </strong><strong>even if more than 100 is passed.</strong> (<em>this</em>) – Defaults to 300.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.contacts.ContactsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.contacts.ContactsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is a contact data.
+First, makes a GET request to retrieve all possible properties of the “contacts”
+object and than uses them to retrieve the contacts data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.extractor.hubspot.deals"></span><dl class="py class">
+<dt id="saga.source.extractor.hubspot.deals.DealsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.deals.</span></code><code class="sig-name descname"><span class="pre">DealsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'hs_lastmodifieddate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archived</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.deals.DealsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “deals/” endpoint of the API.
+This endpoint contains the data of all deals collected by the CRM API.
+Since this endpoint supports filtering, it’s possible to use the field
+“hs_lastmodifieddate” to get only the most recent events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>start_date</strong> (<em>date</em>) – Start period to query results (closed interval).
+Defaults to “1970-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>date</em>) – End period to query results (open interval).
+Defaults to current day.</p></li>
+<li><p><strong>sort_key</strong> (<em>str</em>) – Property name to order results. Defaults to
+“hs_lastmodifieddate”.</p></li>
+<li><p><strong>archived</strong> (<em>bool</em>) – Whether to query archived deals or not. Defaults to False.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 100, if a</p></li>
+<li><p><strong>value is provided</strong><strong>, </strong><strong>a 400 status code is returned. Because of this</strong><strong>,</strong> (<em>higher</em>) – </p></li>
+<li><p><strong>limit is capped at 100</strong><strong>, </strong><strong>even if more than 100 is passed.</strong> (<em>this</em>) – Defaults to 300.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.deals.DealsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.deals.DealsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is deal data.
+First, makes a GET request to retrieve all possible properties of the “deals”
+object and than uses them to retrieve the deals data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.extractor.hubspot.extractor_factory"></span><dl class="py class">
+<dt id="saga.source.extractor.hubspot.extractor_factory.ExtractorFactory">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.extractor_factory.</span></code><code class="sig-name descname"><span class="pre">ExtractorFactory</span></code><a class="headerlink" href="#saga.source.extractor.hubspot.extractor_factory.ExtractorFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Factory to create Hubspot extractor objects</p>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.extractor_factory.ExtractorFactory.create">
+<code class="sig-name descname"><span class="pre">create</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extractor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><span class="pre">saga.source.extractor.extractor.Extractor</span></a><a class="headerlink" href="#saga.source.extractor.hubspot.extractor_factory.ExtractorFactory.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a concrete extractor object
+:param extractor: Name of the extractor to create
+:type extractor: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Object that implements the Extractor interface</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor">Extractor</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-saga.source.extractor.hubspot">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-saga.source.extractor.hubspot" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="saga.source.extractor.hubspot.CompaniesExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.</span></code><code class="sig-name descname"><span class="pre">CompaniesExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'hs_lastmodifieddate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archived</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.CompaniesExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “companies/” endpoint of the API.
+This endpoint contains the data of all companies collected by the CRM API.
+Since this endpoint supports filtering, it’s possible to use the field
+“hs_lastmodifieddate” to get only the most recent events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>start_date</strong> (<em>date</em>) – Start period to query results (closed interval).
+Defaults to “1970-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>date</em>) – End period to query results (open interval).
+Defaults to current day.</p></li>
+<li><p><strong>sort_key</strong> (<em>str</em>) – Property name to order results. Defaults to
+“hs_lastmodifieddate”.</p></li>
+<li><p><strong>archived</strong> (<em>bool</em>) – Whether to query archived deals or not. Defaults to False.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 100, if a</p></li>
+<li><p><strong>value is provided</strong><strong>, </strong><strong>a 400 status code is returned. Because of this</strong><strong>,</strong> (<em>higher</em>) – </p></li>
+<li><p><strong>limit is capped at 100</strong><strong>, </strong><strong>even if more than 100 is passed.</strong> (<em>this</em>) – Defaults to 300.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.CompaniesExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.CompaniesExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is company data.
+First, makes a GET request to retrieve all possible properties of the
+“companies” object and than uses them to retrieve the companies data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.hubspot.ContactIdentityProfilesExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.</span></code><code class="sig-name descname"><span class="pre">ContactIdentityProfilesExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">250</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.ContactIdentityProfilesExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “contacts/v1/lists/all/contacts/all”
+endpoint of the API. This endpoint contains the data of all contacts identity
+profiles collected by the CRM API. Since this endpoint does not support filtering,
+every day all data is extracted for later use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 250, if a
+higher value is provided, the API simply ignores this limit and uses 250
+instead. Defaults to 250.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.ContactIdentityProfilesExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.ContactIdentityProfilesExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is the contact details with it’s identity profiles.
+Makes a GET request with pagination to get all the data. The pagination works
+using the keys “has-more” and “vid-offset” yielded in the API response, where
+the “has-more” key indicates if there is a next page to be requested and the
+“vid-offset” key is used on the next request to get the next result page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.hubspot.ContactListsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.</span></code><code class="sig-name descname"><span class="pre">ContactListsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">250</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.ContactListsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “contacts/v1/lists/” endpoint of
+the API. This endpoint contains the data of all contact lists collected by the
+CRM API. Since this endpoint does not support filtering, every day all data is
+extracted for later use. To filter only new records from this endpoint, it’s
+possible to use the fields “updatedAt”, “metaData.lastProcessingStateChangeAt”
+and “metaData.lastSizeChangeAt”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 250, if a
+higher value is provided, the API simply ignores this limit and uses 250
+instead. Defaults to 250.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.ContactListsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.ContactListsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is contact list.
+Makes a GET request with pagination to get all the data. The pagination works
+using the keys “has-more” and “offset” yielded in the API response, where the
+“has-more” key indicates if there is a next page to be requested and the
+“offset” key is used on the next request to get the next result page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.hubspot.ContactsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.</span></code><code class="sig-name descname"><span class="pre">ContactsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'lastmodifieddate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archived</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.ContactsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “contacts/” endpoint of the API.
+This endpoint contains the data of all contacts collected by the CRM API.
+Since this endpoint supports filtering, it’s possible to use the field
+“lastmodifieddate” to get only the most recent events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>start_date</strong> (<em>date</em>) – Start period to query results (closed interval).
+Defaults to “1970-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>date</em>) – End period to query results (open interval).
+Defaults to current day.</p></li>
+<li><p><strong>sort_key</strong> (<em>str</em>) – Property name to order results. Defaults to
+“lastmodifieddate”.</p></li>
+<li><p><strong>archived</strong> (<em>bool</em>) – Whether to query archived deals or not. Defaults to False.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 100, if a</p></li>
+<li><p><strong>value is provided</strong><strong>, </strong><strong>a 400 status code is returned. Because of this</strong><strong>,</strong> (<em>higher</em>) – </p></li>
+<li><p><strong>limit is capped at 100</strong><strong>, </strong><strong>even if more than 100 is passed.</strong> (<em>this</em>) – Defaults to 300.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.ContactsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.ContactsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is a contact data.
+First, makes a GET request to retrieve all possible properties of the “contacts”
+object and than uses them to retrieve the contacts data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.hubspot.DealsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.</span></code><code class="sig-name descname"><span class="pre">DealsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime.date</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'hs_lastmodifieddate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archived</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tries</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.DealsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract data from the “deals/” endpoint of the API.
+This endpoint contains the data of all deals collected by the CRM API.
+Since this endpoint supports filtering, it’s possible to use the field
+“hs_lastmodifieddate” to get only the most recent events.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_url</strong> (<em>str</em>) – Base API url.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API auth token.</p></li>
+<li><p><strong>start_date</strong> (<em>date</em>) – Start period to query results (closed interval).
+Defaults to “1970-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>date</em>) – End period to query results (open interval).
+Defaults to current day.</p></li>
+<li><p><strong>sort_key</strong> (<em>str</em>) – Property name to order results. Defaults to
+“hs_lastmodifieddate”.</p></li>
+<li><p><strong>archived</strong> (<em>bool</em>) – Whether to query archived deals or not. Defaults to False.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of results per page. The API max is 100, if a</p></li>
+<li><p><strong>value is provided</strong><strong>, </strong><strong>a 400 status code is returned. Because of this</strong><strong>,</strong> (<em>higher</em>) – </p></li>
+<li><p><strong>limit is capped at 100</strong><strong>, </strong><strong>even if more than 100 is passed.</strong> (<em>this</em>) – Defaults to 300.</p></li>
+<li><p><strong>tries</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of retries if the request fails. Defaults to 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.DealsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.hubspot.DealsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response for this endpoint.
+In this case, yields a dictionary containing a list of results, where each
+result is deal data.
+First, makes a GET request to retrieve all possible properties of the “deals”
+object and than uses them to retrieve the deals data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API results</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.hubspot.ExtractorFactory">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.hubspot.</span></code><code class="sig-name descname"><span class="pre">ExtractorFactory</span></code><a class="headerlink" href="#saga.source.extractor.hubspot.ExtractorFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Factory to create Hubspot extractor objects</p>
+<dl class="py method">
+<dt id="saga.source.extractor.hubspot.ExtractorFactory.create">
+<code class="sig-name descname"><span class="pre">create</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extractor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><span class="pre">saga.source.extractor.extractor.Extractor</span></a><a class="headerlink" href="#saga.source.extractor.hubspot.ExtractorFactory.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a concrete extractor object
+:param extractor: Name of the extractor to create
+:type extractor: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Object that implements the Extractor interface</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor">Extractor</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="saga.source.extractor.mindsight.html" class="btn btn-neutral float-right" title="saga.source.extractor.mindsight package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="saga.source.extractor.ga.html" class="btn btn-neutral float-left" title="saga.source.extractor.ga package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

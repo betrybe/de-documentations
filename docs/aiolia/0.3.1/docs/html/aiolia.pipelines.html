@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>aiolia.pipelines package &mdash; Aiolia 0.2.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aiolia.utils package" href="aiolia.utils.html" />
+    <link rel="prev" title="aiolia.components.transform package" href="aiolia.components.transform.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Aiolia
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Specification</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aiolia.html">aiolia package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aiolia.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aiolia.components.html">aiolia.components package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">aiolia.pipelines package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aiolia.utils.html">aiolia.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aiolia.html#module-aiolia">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Aiolia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API Specification</a> &raquo;</li>
+        
+          <li><a href="aiolia.html">aiolia package</a> &raquo;</li>
+        
+      <li>aiolia.pipelines package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/aiolia.pipelines.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="aiolia-pipelines-package">
+<h1>aiolia.pipelines package<a class="headerlink" href="#aiolia-pipelines-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-aiolia.pipelines.etl_pipeline">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-aiolia.pipelines.etl_pipeline" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aiolia.pipelines.etl_pipeline.ETLPipeline">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.pipelines.etl_pipeline.</span></code><code class="sig-name descname"><span class="pre">ETLPipeline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.etl_pipeline.ETLPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.pipelines.pipeline.Pipeline" title="aiolia.pipelines.pipeline.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.pipelines.pipeline.Pipeline</span></code></a></p>
+<p>Generic ETL pipeline used to build complex transforms.</p>
+<p>Uses the list of sources, transforms and sinks to create a DAG representing the
+pipeline. This DAG is executed in parallel using a simple DAG internal scheduler,
+no Airflow is involved in this step.</p>
+<p>Creates the DAG using the components lists.</p>
+<p>Each component list element is a dictionary with the following structure: a
+“component” key containing the class name (exact class name, without the path
+preceding it, “component”: “JsonSource” for example); a “component_name” key
+that contains the name given to the component (must be unique within the
+pipeline); a “to” key that contains a list of component names to where the
+output of this component needs to be directed (each name is defined by the
+“component_name” key); a “kwargs” key that contains the key word arguments of
+the component (if needed).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user. Used for
+all extract, transform and load operations.</p></li>
+<li><p><strong>sources</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the sources to be used. Each element
+is a dictionary that follows the explained pattern.</p></li>
+<li><p><strong>transforms</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the transforms to be used. Each
+element is a dictionary that follows the explained pattern.</p></li>
+<li><p><strong>sinks</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the sinks to be used. Each element is
+a dictionary that follows the explained pattern.</p></li>
+<li><p><strong>threads</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of threads to use in the DAG execution.
+Defaults to 8.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.pipelines.etl_pipeline.ETLPipeline.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.etl_pipeline.ETLPipeline.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the pipeline sequentially or in parallel.</p>
+<p>Runs all components following the DAG dependencies.</p>
+<p>If everything runs ok, log a success message with execution status. If not,
+logs a failed message with the execution status before the problem occurred.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.pipelines.migration_pipeline"></span><dl class="py class">
+<dt id="aiolia.pipelines.migration_pipeline.MigrationPipeline">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.pipelines.migration_pipeline.</span></code><code class="sig-name descname"><span class="pre">MigrationPipeline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.migration_pipeline.MigrationPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.pipelines.pipeline.Pipeline" title="aiolia.pipelines.pipeline.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.pipelines.pipeline.Pipeline</span></code></a></p>
+<p>Simple pipeline used to transform a single table per turn.</p>
+<p>Uses the list of sources, transforms and sinks to create a simple one directional
+pipeline. Each source passes through each transform in order and than goes to each
+sink. No directional declaring is needed, the only thing that needs to be enforced
+is the transforms list order, since the transforms will execute in the order passed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user. Used for
+all extract, transform and load operations.</p></li>
+<li><p><strong>sources</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the sources to be used. Each element
+is a dictionary that follows the pattern: a “component” key containing
+the class name (exact class name, without the path preceding it.
+“component”: “JsonSource” for example); an “objects” key containing the
+details for each data to be extracted. For example, for a “JsonSource”
+class, it’s necessary to pass the path of the json file(s) to be
+extracted and, besides that, the destination name can be defined to,
+if not, the same name will be used to write to. With this, the key
+“objects” looks like this: <cite>“objects”: [{“file_name”: file_1.json,
+“dest_file_name”: “file_1_transformed.json”}, {“file_name”:
+file_2.json, “dest_file_name”: “file_2_transformed.json”}]</cite>. With this,
+two files will be extracted using the same Source class declaration and
+the destination file will be already mapped for each file. This can be
+used for any Source class, just be careful to use the correct keys in
+the objects list.</p></li>
+<li><p><strong>transforms</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the transforms to be used. As in
+the source list, each element is a dictionary containing the class name
+in the “component” key but, different from the previous, no object list
+is needed since a transform object reads from a Source class or another
+Transform class. Even though no object list is needed, you can pass a
+<cite>kwargs</cite> key with a dictionary to be used by the component.
+<strong>Order matters</strong>, since the Transform classes will run in the order
+provided.</p></li>
+<li><p><strong>sinks</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the sinks to be used. Because of the
+destination name already defined in the Source declarations, the sinks
+only need the “component” key with the class name. The <cite>kwargs</cite> key is
+also optional here, containing the <cite>kwargs</cite> used by the component.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.pipelines.migration_pipeline.MigrationPipeline.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.migration_pipeline.MigrationPipeline.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the pipeline.</p>
+<p>Runs every possible path leaving from a source to a sink. Each path contains
+the list of the sources, transforms and sinks in order for the execution.</p>
+<p>If everything runs ok, log a success message with execution status. If not,
+logs a failed message with the execution status before the problem ocurred.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.pipelines.pipeline_creator"></span><dl class="py class">
+<dt id="aiolia.pipelines.pipeline_creator.PipelineCreator">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.pipelines.pipeline_creator.</span></code><code class="sig-name descname"><span class="pre">PipelineCreator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipeline_description_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipeline_configuration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.pipeline_creator.PipelineCreator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to create a pipeline based on a description file.</p>
+<p>The user creates an YAML file describing the pipeline and its directions and
+uses this class to parse this file and create an actual pipeline object to be
+used.</p>
+<p>The file needs to include a “source”, “transform”, “sink” and “directions” keys.
+The first 3 keys must be a list of component details and each detail must
+obligatory include the “component” and “component_name” arguments. For the
+extra arguments of the component, the user specifies them in the “kwargs” key.
+The “directions” is a list of strings defining the directions of the pipeline
+components, using a pattern that follows: “&lt;component_name&gt; -&gt; &lt;component_name&gt;
+-&gt; …”. There can be multiple directions definitions and each direction string
+must end and start with a component name.</p>
+<p>If the user wants to pass dynamic configurations that are not possible with a
+YAML file, it’s possible to pass through the “pipeline_configuration” argument.
+One example of use is incremental pipelines which need a dynamic start and end
+dates to work correctly. With this, the pipeline start and end dates can be
+configured dynamically where the pipeline is being run (usually on databricks).
+To use this feature, simply create the YAML with template variables, as
+explained more below.</p>
+<p>It’s mandatory to the user to provide a documentation file (README.md format)
+describing the pipeline process, what sources does it use, what it does with
+the sources and where and how it stores the end result. Alongside with the doc
+file, the user must provide a schema file located in the same folder as the
+pipeline translator (subfolders are also ok) describing the end result schema.
+Even if the pipeline output isn’t a proper table, it’s recommended to provide
+the schema.</p>
+<p class="rubric">Example</p>
+<p>A YAML file with the correct description looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sources</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericSource&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_source_name&#39;</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;AnotherGenericSource&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;AnotherGenericSourceName&#39;</span>
+<span class="n">transforms</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericTransform&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_transform_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">generic_argument</span><span class="p">:</span> <span class="s1">&#39;some_value&#39;</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;ApplySchemaTransform&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;apply_schema&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="s1">&#39;output_schema.json&#39;</span>
+<span class="n">sinks</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericSink&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_sink_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">generic_destination</span><span class="p">:</span> <span class="s1">&#39;some_db&#39;</span>
+        <span class="n">generic_table</span><span class="p">:</span> <span class="s1">&#39;some_table&#39;</span>
+<span class="n">directions</span><span class="p">:</span>
+    <span class="o">-</span> <span class="s1">&#39;generic_source_name -&gt; generic_transform_name -&gt; generic_sink_name&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;AnotherGenericSourceName -&gt; generic_transform_name&#39;</span>
+</pre></div>
+</div>
+<p>Note: the schema can be stored in a subfolder. In this case, the above
+example would use a “schema” key as “assets/output_schema.json” if the file
+was located in the “assets” subfolder.</p>
+<p>Another example, a YAML file with templated variables (“start_date” and
+“end_date”) that will be replaced by the pipeline configuration values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sources</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericSource&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_source_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">start_date</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{start_date}</span><span class="s1">&#39;</span>
+        <span class="n">end_date</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{end_date}</span><span class="s1">&#39;</span>
+<span class="n">transforms</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericTransform&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_transform_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">generic_argument</span><span class="p">:</span> <span class="s1">&#39;some_value&#39;</span>
+<span class="n">sinks</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericSink&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_sink_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">generic_destination</span><span class="p">:</span> <span class="s1">&#39;some_db&#39;</span>
+        <span class="n">generic_table</span><span class="p">:</span> <span class="s1">&#39;some_table&#39;</span>
+<span class="n">directions</span><span class="p">:</span>
+    <span class="o">-</span> <span class="s1">&#39;generic_source_name -&gt; generic_transform_name -&gt; generic_sink_name&#39;</span>
+</pre></div>
+</div>
+<p>Note: a template variable will always be enclosed by brackets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pipeline_description_file</strong> (<em>str</em>) – YAML file with the complete pipeline
+description.</p></li>
+<li><p><strong>pipeline_configuration</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dynamic pipeline configurations
+used for incremental pipelines. The configurations will be used to fill
+formatting patterns in the YAML file. For example, if the user passes
+a field called “start_date” in this argument and there is a format
+pattern “{start_date}” in the YAML file, it will be substituted by this
+value. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.utils.exceptions.html#aiolia.utils.exceptions.pipeline.InvalidDirectionDefinitionException" title="aiolia.utils.exceptions.pipeline.InvalidDirectionDefinitionException"><strong>InvalidDirectionDefinitionException</strong></a> – If a direction doesn’t follow the
+    correct pattern, this exception is raised.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.pipelines.pipeline_creator.PipelineCreator.create_pipeline">
+<code class="sig-name descname"><span class="pre">create_pipeline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#aiolia.pipelines.etl_pipeline.ETLPipeline" title="aiolia.pipelines.etl_pipeline.ETLPipeline"><span class="pre">aiolia.pipelines.etl_pipeline.ETLPipeline</span></a><a class="headerlink" href="#aiolia.pipelines.pipeline_creator.PipelineCreator.create_pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the created pipeline object to the user.</p>
+<p>This method uses the description file to build the pipeline object for the user.
+Since the file parsing is already done by the constructor, this method simply
+traverses through the directions to build the actual component relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session object provided by the user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The actual pipeline object, initialized with the provided</dt><dd><p>components and directions.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aiolia.pipelines.etl_pipeline.ETLPipeline" title="aiolia.pipelines.etl_pipeline.ETLPipeline">ETLPipeline</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.pipelines.pipeline"></span><dl class="py class">
+<dt id="aiolia.pipelines.pipeline.Pipeline">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.pipelines.pipeline.</span></code><code class="sig-name descname"><span class="pre">Pipeline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.pipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds the logic of a data pipeline.</p>
+<dl class="py method">
+<dt id="aiolia.pipelines.pipeline.Pipeline.run">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.pipeline.Pipeline.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-aiolia.pipelines">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aiolia.pipelines" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aiolia.pipelines.ETLPipeline">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.pipelines.</span></code><code class="sig-name descname"><span class="pre">ETLPipeline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.ETLPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.pipelines.pipeline.Pipeline" title="aiolia.pipelines.pipeline.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.pipelines.pipeline.Pipeline</span></code></a></p>
+<p>Generic ETL pipeline used to build complex transforms.</p>
+<p>Uses the list of sources, transforms and sinks to create a DAG representing the
+pipeline. This DAG is executed in parallel using a simple DAG internal scheduler,
+no Airflow is involved in this step.</p>
+<p>Creates the DAG using the components lists.</p>
+<p>Each component list element is a dictionary with the following structure: a
+“component” key containing the class name (exact class name, without the path
+preceding it, “component”: “JsonSource” for example); a “component_name” key
+that contains the name given to the component (must be unique within the
+pipeline); a “to” key that contains a list of component names to where the
+output of this component needs to be directed (each name is defined by the
+“component_name” key); a “kwargs” key that contains the key word arguments of
+the component (if needed).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user. Used for
+all extract, transform and load operations.</p></li>
+<li><p><strong>sources</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the sources to be used. Each element
+is a dictionary that follows the explained pattern.</p></li>
+<li><p><strong>transforms</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the transforms to be used. Each
+element is a dictionary that follows the explained pattern.</p></li>
+<li><p><strong>sinks</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the sinks to be used. Each element is
+a dictionary that follows the explained pattern.</p></li>
+<li><p><strong>threads</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of threads to use in the DAG execution.
+Defaults to 8.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.pipelines.ETLPipeline.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.ETLPipeline.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the pipeline sequentially or in parallel.</p>
+<p>Runs all components following the DAG dependencies.</p>
+<p>If everything runs ok, log a success message with execution status. If not,
+logs a failed message with the execution status before the problem occurred.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aiolia.pipelines.MigrationPipeline">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.pipelines.</span></code><code class="sig-name descname"><span class="pre">MigrationPipeline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.MigrationPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.pipelines.pipeline.Pipeline" title="aiolia.pipelines.pipeline.Pipeline"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.pipelines.pipeline.Pipeline</span></code></a></p>
+<p>Simple pipeline used to transform a single table per turn.</p>
+<p>Uses the list of sources, transforms and sinks to create a simple one directional
+pipeline. Each source passes through each transform in order and than goes to each
+sink. No directional declaring is needed, the only thing that needs to be enforced
+is the transforms list order, since the transforms will execute in the order passed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user. Used for
+all extract, transform and load operations.</p></li>
+<li><p><strong>sources</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the sources to be used. Each element
+is a dictionary that follows the pattern: a “component” key containing
+the class name (exact class name, without the path preceding it.
+“component”: “JsonSource” for example); an “objects” key containing the
+details for each data to be extracted. For example, for a “JsonSource”
+class, it’s necessary to pass the path of the json file(s) to be
+extracted and, besides that, the destination name can be defined to,
+if not, the same name will be used to write to. With this, the key
+“objects” looks like this: <cite>“objects”: [{“file_name”: file_1.json,
+“dest_file_name”: “file_1_transformed.json”}, {“file_name”:
+file_2.json, “dest_file_name”: “file_2_transformed.json”}]</cite>. With this,
+two files will be extracted using the same Source class declaration and
+the destination file will be already mapped for each file. This can be
+used for any Source class, just be careful to use the correct keys in
+the objects list.</p></li>
+<li><p><strong>transforms</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the transforms to be used. As in
+the source list, each element is a dictionary containing the class name
+in the “component” key but, different from the previous, no object list
+is needed since a transform object reads from a Source class or another
+Transform class. Even though no object list is needed, you can pass a
+<cite>kwargs</cite> key with a dictionary to be used by the component.
+<strong>Order matters</strong>, since the Transform classes will run in the order
+provided.</p></li>
+<li><p><strong>sinks</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List containing the sinks to be used. Because of the
+destination name already defined in the Source declarations, the sinks
+only need the “component” key with the class name. The <cite>kwargs</cite> key is
+also optional here, containing the <cite>kwargs</cite> used by the component.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.pipelines.MigrationPipeline.run">
+<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.MigrationPipeline.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the pipeline.</p>
+<p>Runs every possible path leaving from a source to a sink. Each path contains
+the list of the sources, transforms and sinks in order for the execution.</p>
+<p>If everything runs ok, log a success message with execution status. If not,
+logs a failed message with the execution status before the problem ocurred.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aiolia.pipelines.PipelineCreator">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.pipelines.</span></code><code class="sig-name descname"><span class="pre">PipelineCreator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pipeline_description_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pipeline_configuration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.pipelines.PipelineCreator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to create a pipeline based on a description file.</p>
+<p>The user creates an YAML file describing the pipeline and its directions and
+uses this class to parse this file and create an actual pipeline object to be
+used.</p>
+<p>The file needs to include a “source”, “transform”, “sink” and “directions” keys.
+The first 3 keys must be a list of component details and each detail must
+obligatory include the “component” and “component_name” arguments. For the
+extra arguments of the component, the user specifies them in the “kwargs” key.
+The “directions” is a list of strings defining the directions of the pipeline
+components, using a pattern that follows: “&lt;component_name&gt; -&gt; &lt;component_name&gt;
+-&gt; …”. There can be multiple directions definitions and each direction string
+must end and start with a component name.</p>
+<p>If the user wants to pass dynamic configurations that are not possible with a
+YAML file, it’s possible to pass through the “pipeline_configuration” argument.
+One example of use is incremental pipelines which need a dynamic start and end
+dates to work correctly. With this, the pipeline start and end dates can be
+configured dynamically where the pipeline is being run (usually on databricks).
+To use this feature, simply create the YAML with template variables, as
+explained more below.</p>
+<p>It’s mandatory to the user to provide a documentation file (README.md format)
+describing the pipeline process, what sources does it use, what it does with
+the sources and where and how it stores the end result. Alongside with the doc
+file, the user must provide a schema file located in the same folder as the
+pipeline translator (subfolders are also ok) describing the end result schema.
+Even if the pipeline output isn’t a proper table, it’s recommended to provide
+the schema.</p>
+<p class="rubric">Example</p>
+<p>A YAML file with the correct description looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sources</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericSource&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_source_name&#39;</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;AnotherGenericSource&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;AnotherGenericSourceName&#39;</span>
+<span class="n">transforms</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericTransform&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_transform_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">generic_argument</span><span class="p">:</span> <span class="s1">&#39;some_value&#39;</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;ApplySchemaTransform&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;apply_schema&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="s1">&#39;output_schema.json&#39;</span>
+<span class="n">sinks</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericSink&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_sink_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">generic_destination</span><span class="p">:</span> <span class="s1">&#39;some_db&#39;</span>
+        <span class="n">generic_table</span><span class="p">:</span> <span class="s1">&#39;some_table&#39;</span>
+<span class="n">directions</span><span class="p">:</span>
+    <span class="o">-</span> <span class="s1">&#39;generic_source_name -&gt; generic_transform_name -&gt; generic_sink_name&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;AnotherGenericSourceName -&gt; generic_transform_name&#39;</span>
+</pre></div>
+</div>
+<p>Note: the schema can be stored in a subfolder. In this case, the above
+example would use a “schema” key as “assets/output_schema.json” if the file
+was located in the “assets” subfolder.</p>
+<p>Another example, a YAML file with templated variables (“start_date” and
+“end_date”) that will be replaced by the pipeline configuration values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sources</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericSource&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_source_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">start_date</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{start_date}</span><span class="s1">&#39;</span>
+        <span class="n">end_date</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{end_date}</span><span class="s1">&#39;</span>
+<span class="n">transforms</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericTransform&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_transform_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">generic_argument</span><span class="p">:</span> <span class="s1">&#39;some_value&#39;</span>
+<span class="n">sinks</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">component</span><span class="p">:</span> <span class="s1">&#39;GenericSink&#39;</span>
+      <span class="n">component_name</span><span class="p">:</span> <span class="s1">&#39;generic_sink_name&#39;</span>
+      <span class="n">kwargs</span><span class="p">:</span>
+        <span class="n">generic_destination</span><span class="p">:</span> <span class="s1">&#39;some_db&#39;</span>
+        <span class="n">generic_table</span><span class="p">:</span> <span class="s1">&#39;some_table&#39;</span>
+<span class="n">directions</span><span class="p">:</span>
+    <span class="o">-</span> <span class="s1">&#39;generic_source_name -&gt; generic_transform_name -&gt; generic_sink_name&#39;</span>
+</pre></div>
+</div>
+<p>Note: a template variable will always be enclosed by brackets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pipeline_description_file</strong> (<em>str</em>) – YAML file with the complete pipeline
+description.</p></li>
+<li><p><strong>pipeline_configuration</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dynamic pipeline configurations
+used for incremental pipelines. The configurations will be used to fill
+formatting patterns in the YAML file. For example, if the user passes
+a field called “start_date” in this argument and there is a format
+pattern “{start_date}” in the YAML file, it will be substituted by this
+value. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.utils.exceptions.html#aiolia.utils.exceptions.pipeline.InvalidDirectionDefinitionException" title="aiolia.utils.exceptions.pipeline.InvalidDirectionDefinitionException"><strong>InvalidDirectionDefinitionException</strong></a> – If a direction doesn’t follow the
+    correct pattern, this exception is raised.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.pipelines.PipelineCreator.create_pipeline">
+<code class="sig-name descname"><span class="pre">create_pipeline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#aiolia.pipelines.etl_pipeline.ETLPipeline" title="aiolia.pipelines.etl_pipeline.ETLPipeline"><span class="pre">aiolia.pipelines.etl_pipeline.ETLPipeline</span></a><a class="headerlink" href="#aiolia.pipelines.PipelineCreator.create_pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the created pipeline object to the user.</p>
+<p>This method uses the description file to build the pipeline object for the user.
+Since the file parsing is already done by the constructor, this method simply
+traverses through the directions to build the actual component relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session object provided by the user.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The actual pipeline object, initialized with the provided</dt><dd><p>components and directions.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aiolia.pipelines.ETLPipeline" title="aiolia.pipelines.ETLPipeline">ETLPipeline</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="aiolia.utils.html" class="btn btn-neutral float-right" title="aiolia.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="aiolia.components.transform.html" class="btn btn-neutral float-left" title="aiolia.components.transform package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

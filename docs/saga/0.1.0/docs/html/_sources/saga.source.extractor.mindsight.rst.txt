@@ -1,0 +1,28 @@
+saga.source.extractor.mindsight package
+=================================================
+
+Submodules
+----------
+
+.. automodule:: saga.source.extractor.mindsight.logic
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.mindsight.people
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.mindsight.extractor_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: saga.source.extractor.mindsight
+   :members:
+   :undoc-members:
+   :show-inheritance:
