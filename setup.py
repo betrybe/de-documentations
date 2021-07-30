@@ -15,5 +15,5 @@ setup(
     long_description=readme,
     url="https://github.com/betrybe/docs_framework",
     install_requires=requirements,
-    packages=find_packages()
+    packages=find_packages(),
 )
