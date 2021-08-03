@@ -2,7 +2,7 @@ import json
 import os
 import sqlite3
 
-from flask import Flask, redirect, request, url_for, send_from_directory
+from flask import Flask, redirect, request, url_for, send_from_directory, Blueprint
 from flask_login import (
     LoginManager,
     current_user,
@@ -16,6 +16,9 @@ import requests
 from sso_authentication.db import init_db_command
 from sso_authentication.user import User
 
+from saga import saga
+from aiolia import aiolia
+
 GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", None)
 GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", None)
 
@@ -24,6 +27,8 @@ GOOGLE_DISCOVERY_URL = (
 )
 
 app = Flask(__name__)
+app.register_blueprint(saga, url_prefix='/saga')
+app.register_blueprint(aiolia, url_prefix='/aiolia')
 app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
 
 login_manager = LoginManager()
@@ -160,16 +165,27 @@ def send_aiolia_static_js_stuff(path):
     return send_from_directory('aiolia/0.3.1/docs/html/html/_static/js', path)
 
 
-@app.route('/<path:path>')
-def send_page(path):
+# url = url_for('saga.send_saga_page')
+
+
+""" @app.route('/<path:path>')
+def send_saga_page(path):
     if path == 'saga':
         return send_from_directory("saga/0.1.0/docs/html", "home.html")
-    elif path == 'aiolia':
+
+    file_name = path.split("/")[-1]
+    return send_from_directory("saga/0.1.0/docs/html", file_name) """
+
+
+""" @app.route('/aiolia/<path:path>')
+def send_aiolia_page(path):
+    if path == 'aiolia':
         return send_from_directory("aiolia/0.3.1/docs/html", "index.html")
 
     file_name = path.split("/")[-1]
-    path_without_file = path.replace(file_name, "")
-    return send_from_directory(path_without_file, file_name)
+    print(f"file_name: {file_name}")
+    print(f"path fora do aiolia/home: {path}")
+    return send_from_directory("aiolia/0.3.1/docs/html", file_name) """
 
 
 if __name__ == "__main__":
