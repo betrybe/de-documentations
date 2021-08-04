@@ -1,10 +1,7 @@
-
 from flask import Flask, redirect, request, url_for, Blueprint
 import requests
 import json
-from flask_login import (
-    login_user
-)
+from flask_login import login_user
 import os
 from oauthlib.oauth2 import WebApplicationClient
 from .user import User
@@ -14,11 +11,9 @@ GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET", None)
 
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
 
-GOOGLE_DISCOVERY_URL = (
-    "https://accounts.google.com/.well-known/openid-configuration"
-)
+GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
 
-login_routes = Blueprint('login_routes', __name__)
+login_routes = Blueprint("login_routes", __name__)
 
 
 @login_routes.route("/login")
@@ -44,7 +39,7 @@ def callback():
         token_endpoint,
         authorization_response=request.url,
         redirect_url=request.base_url,
-        code=code
+        code=code,
     )
     token_response = requests.post(
         token_url,
@@ -68,9 +63,7 @@ def callback():
     else:
         return "User email not available or not verified by Google.", 400
 
-    user = User(
-        id_=unique_id, name=users_name, email=users_email, profile_pic=picture
-    )
+    user = User(id_=unique_id, name=users_name, email=users_email, profile_pic=picture)
 
     if not User.get(unique_id):
         User.create(unique_id, users_name, users_email, picture)
