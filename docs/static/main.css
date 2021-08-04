@@ -1,0 +1,27 @@
+.container-modal{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:#006550;
+  
+}
+.container-modal.flexbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+h1 {
+font-size: 10ex;
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+color:white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 3ex;
+}
