@@ -59,7 +59,7 @@ black:
 
 .PHONY: tests
 tests:
-	@python3 -m pytest --cov-branch --cov-report term-missing --cov=docs_framework tests/
+	@python3 -m pytest --cov-branch --cov-report term-missing --cov=de-documentations tests/
 
 ## Build wheel
 

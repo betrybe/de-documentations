@@ -13,7 +13,7 @@ setup(
     python_requires=">=3.8.2",
     description="Stores Data Engineering frameworks documentation",
     long_description=readme,
-    url="https://github.com/betrybe/docs_framework",
+    url="https://github.com/betrybe/de-documentations",
     install_requires=requirements,
     packages=find_packages(),
 )
