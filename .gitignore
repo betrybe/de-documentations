@@ -40,3 +40,7 @@ spark-warehouse/
 
 # VSCode
 .vscode/
+
+#Docs
+saga/
+aiolia/
