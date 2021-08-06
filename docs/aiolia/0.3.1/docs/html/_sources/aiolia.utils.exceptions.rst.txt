@@ -1,0 +1,28 @@
+aiolia.utils.exceptions package
+===============================
+
+Submodules
+----------
+
+.. automodule:: aiolia.utils.exceptions.graph
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.utils.exceptions.pipeline
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.utils.exceptions.sql
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: aiolia.utils.exceptions
+   :members:
+   :undoc-members:
+   :show-inheritance:

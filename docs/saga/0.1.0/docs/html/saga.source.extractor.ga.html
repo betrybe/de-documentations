@@ -1,0 +1,858 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>saga.source.extractor.ga package &mdash; Saga  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="saga.source.extractor.hubspot package" href="saga.source.extractor.hubspot.html" />
+    <link rel="prev" title="saga.source.extractor package" href="saga.source.extractor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Saga
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="home.html">Saga: Modularization and Ease of Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sink.html">Sink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration and Use</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Specification</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="saga.html">saga package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="saga.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="saga.source.html">saga.source package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.sink.html">saga.sink package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="saga.utils.html">saga.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="saga.html#module-saga">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Saga</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API Specification</a> &raquo;</li>
+        
+          <li><a href="saga.html">saga package</a> &raquo;</li>
+        
+          <li><a href="saga.source.html">saga.source package</a> &raquo;</li>
+        
+          <li><a href="saga.source.extractor.html">saga.source.extractor package</a> &raquo;</li>
+        
+      <li>saga.source.extractor.ga package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/saga.source.extractor.ga.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="saga-source-extractor-ga-package">
+<h1>saga.source.extractor.ga package<a class="headerlink" href="#saga-source-extractor-ga-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-saga.source.extractor.ga.anonymous_id_extractor">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-saga.source.extractor.ga.anonymous_id_extractor" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="saga.source.extractor.ga.anonymous_id_extractor.AnonymousIDExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.anonymous_id_extractor.</span></code><code class="sig-name descname"><span class="pre">AnonymousIDExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.anonymous_id_extractor.AnonymousIDExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract user traffic data from the GA API.
+Every user on the platform holds an ID, called the anonymous ID. This extractor
+gets all the data related to user traffic based on date intervals. The most
+common extraction is a daily one, but this class gives the option to extract
+from any period of time if necessary, respecting the API limits, such as the
+minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already intialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.anonymous_id_extractor.AnonymousIDExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.anonymous_id_extractor.AnonymousIDExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.extractor.ga.costs_extractor"></span><dl class="py class">
+<dt id="saga.source.extractor.ga.costs_extractor.CostsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.costs_extractor.</span></code><code class="sig-name descname"><span class="pre">CostsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.costs_extractor.CostsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract ad costs data from the GA API.
+The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such
+as the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already intialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.costs_extractor.CostsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.costs_extractor.CostsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the campaign costs data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.extractor.ga.customreport"></span><dl class="py class">
+<dt id="saga.source.extractor.ga.customreport.CustomreportExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.customreport.</span></code><code class="sig-name descname"><span class="pre">CustomreportExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.customreport.CustomreportExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.customreport.CustomreportExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.customreport.CustomreportExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-saga.source.extractor.ga.extractor_factory"></span><dl class="py class">
+<dt id="saga.source.extractor.ga.extractor_factory.ExtractorFactory">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.extractor_factory.</span></code><code class="sig-name descname"><span class="pre">ExtractorFactory</span></code><a class="headerlink" href="#saga.source.extractor.ga.extractor_factory.ExtractorFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Factory to create Google Analytics extractor objects</p>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.extractor_factory.ExtractorFactory.create">
+<code class="sig-name descname"><span class="pre">create</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extractor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><span class="pre">saga.source.extractor.extractor.Extractor</span></a><a class="headerlink" href="#saga.source.extractor.ga.extractor_factory.ExtractorFactory.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a concrete extractor object
+:param extractor: Name of the extractor to create
+:type extractor: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Object that implements the Extractor interface</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor">Extractor</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-saga.source.extractor.ga">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-saga.source.extractor.ga" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="saga.source.extractor.ga.AnonymousIDExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">AnonymousIDExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.AnonymousIDExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract user traffic data from the GA API.
+Every user on the platform holds an ID, called the anonymous ID. This extractor
+gets all the data related to user traffic based on date intervals. The most
+common extraction is a daily one, but this class gives the option to extract
+from any period of time if necessary, respecting the API limits, such as the
+minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already intialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.AnonymousIDExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.AnonymousIDExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.CampaignCostsDailyExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">CampaignCostsDailyExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.CampaignCostsDailyExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract campaign costs per day.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.CampaignCostsDailyExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.CampaignCostsDailyExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.CostsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">CostsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.CostsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract ad costs data from the GA API.
+The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such
+as the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already intialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.CostsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.CostsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the campaign costs data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.CustomreportExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">CustomreportExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.CustomreportExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.CustomreportExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.CustomreportExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.EnrollmentsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">EnrollmentsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.EnrollmentsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract the enrollment count per day.</p>
+<p>Number of people who enrolled in the marketing form.
+To extract this, the metric “ga:goal7Completions” is used. This metric represents
+finalized enrollments. For the dimensions, the following are used: “ga:source”,
+“ga:medium”, “ga:campaign”, “ga:channelGrouping” and “ga:date”.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.EnrollmentsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.EnrollmentsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.EventsAnonymousIDExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">EventsAnonymousIDExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.EventsAnonymousIDExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract unique events per anonymous ID per day.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.EventsAnonymousIDExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.EventsAnonymousIDExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.EventsCategoryLabelExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">EventsCategoryLabelExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.EventsCategoryLabelExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract unique events per event and per label.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.EventsCategoryLabelExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.EventsCategoryLabelExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.ExtractorFactory">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">ExtractorFactory</span></code><a class="headerlink" href="#saga.source.extractor.ga.ExtractorFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Factory to create Google Analytics extractor objects</p>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.ExtractorFactory.create">
+<code class="sig-name descname"><span class="pre">create</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extractor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extractor_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><span class="pre">saga.source.extractor.extractor.Extractor</span></a><a class="headerlink" href="#saga.source.extractor.ga.ExtractorFactory.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a concrete extractor object
+:param extractor: Name of the extractor to create
+:type extractor: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Object that implements the Extractor interface</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor">Extractor</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.LeadsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">LeadsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.LeadsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract the lead count per day.</p>
+<p>Number of people who converted to an Trybe opt-in, leaving at least the email.
+To extract this, the metric “ga:goal11Completions” is used. This metric represents
+generic leads. For the dimensions, the following are used: “ga:source”, “ga:medium”,
+“ga:campaign”, “ga:channelGrouping”, “ga:landingPagePath” and “ga:date”.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.LeadsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.LeadsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.QualifiedEnrollmentsAnonymousIDExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">QualifiedEnrollmentsAnonymousIDExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.QualifiedEnrollmentsAnonymousIDExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract the qualified enrollment count per day and anon id.</p>
+<p>Number of people enrolled in the Marketing form with time availability, complete
+high school and over 18 years old on the date of enrollment.
+To extract this, the metric “ga:goal9Completions” is used. This metric represents
+finalized qualified enrollments. For the dimensions, the following are used:
+“ga:source”, “ga:medium”, “ga:campaign”, “ga:channelGrouping”, “ga:dimension1”
+and “ga:date”.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.QualifiedEnrollmentsAnonymousIDExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.QualifiedEnrollmentsAnonymousIDExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.QualifiedEnrollmentsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">QualifiedEnrollmentsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.QualifiedEnrollmentsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract the qualified enrollment count per day.</p>
+<p>Number of people enrolled in the Marketing form with time availability, complete
+high school and over 18 years old on the date of enrollment.
+To extract this, the metric “ga:goal9Completions” is used. This metric represents
+finalized qualified enrollments. For the dimensions, the following are used:
+“ga:source”, “ga:medium”, “ga:campaign”, “ga:channelGrouping” and “ga:date”.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.QualifiedEnrollmentsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.QualifiedEnrollmentsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.QualifiedEnrollmentsUUIDExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">QualifiedEnrollmentsUUIDExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.QualifiedEnrollmentsUUIDExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract the qualified enrollment count per day and uuid.</p>
+<p>Number of people enrolled in the Marketing form with time availability, complete
+high school and over 18 years old on the date of enrollment.
+To extract this, the metric “ga:goal9Completions” is used. This metric represents
+finalized qualified enrollments. For the dimensions, the following are used:
+“ga:source”, “ga:medium”, “ga:campaign”, “ga:channelGrouping”, “ga:dimension2”
+and “ga:date”.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.QualifiedEnrollmentsUUIDExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.QualifiedEnrollmentsUUIDExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.SessionsAnonymousIDExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">SessionsAnonymousIDExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.SessionsAnonymousIDExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract session count per day and anon id.</p>
+<p>Each person can generate multiple sessions at the same time interval. It’s important
+to extract the session count per day using other dimensions to measure and filter
+those sessions. This extractor uses the following dimensions: “ga:source”,
+“ga:medium”, “ga:campaign”, “ga:channelGrouping”, “ga:dimension1” and “ga:date”.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.SessionsAnonymousIDExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.SessionsAnonymousIDExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.SessionsExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">SessionsExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.SessionsExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract session count per day.</p>
+<p>Each person can generate multiple sessions at the same time interval. It’s important
+to extract the session count per day using other dimensions to measure and filter
+those sessions. This extractor uses the following dimensions: “ga:source”,
+“ga:medium”, “ga:campaign”, “ga:channelGrouping”, “ga:pagePath” and “ga:date”.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.SessionsExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.SessionsExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="saga.source.extractor.ga.SessionsUUIDExtractor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">saga.source.extractor.ga.</span></code><code class="sig-name descname"><span class="pre">SessionsUUIDExtractor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ga_client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2005-01-01'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'yesterday'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.SessionsUUIDExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="saga.source.extractor.html#saga.source.extractor.extractor.Extractor" title="saga.source.extractor.extractor.Extractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">saga.source.extractor.extractor.Extractor</span></code></a></p>
+<p>Holds the logic to extract session count per day and uuid.</p>
+<p>Each person can generate multiple sessions at the same time interval. It’s important
+to extract the session count per day using other dimensions to measure and filter
+those sessions. This extractor uses the following dimensions: “ga:source”,
+“ga:medium”, “ga:campaign”, “ga:channelGrouping”, “ga:dimension2” and “ga:date”.</p>
+<p>The most common extraction is a daily one, but this class gives the option to
+extract from any period of time if necessary, respecting the API limits, such as
+the minimum start date of “2005-01-01”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ga_client</strong> (<em>object</em>) – GA API object already initialized with credentials.</p></li>
+<li><p><strong>view_id</strong> (<em>str</em>) – GA view ID to extract the data. Must be a string.</p></li>
+<li><p><strong>start_date</strong> (<em>str</em><em>, </em><em>optional</em>) – Initial extraction date.
+Defaults to “2005-01-01”.</p></li>
+<li><p><strong>end_date</strong> (<em>str</em><em>, </em><em>optional</em>) – End extraction date. Defaults to “yesterday”.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – API page limit. Defaults to 10000.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="saga.source.extractor.ga.SessionsUUIDExtractor.extract">
+<code class="sig-name descname"><span class="pre">extract</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#saga.source.extractor.ga.SessionsUUIDExtractor.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the API response.
+In this case, get all the user traffic data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><p><em>dict</em> – Json containing the API data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="saga.source.extractor.hubspot.html" class="btn btn-neutral float-right" title="saga.source.extractor.hubspot package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="saga.source.extractor.html" class="btn btn-neutral float-left" title="saga.source.extractor package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

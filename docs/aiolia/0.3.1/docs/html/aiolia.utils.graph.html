@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>aiolia.utils.graph package &mdash; Aiolia 0.2.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="aiolia.utils.exceptions package" href="aiolia.utils.exceptions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Aiolia
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Specification</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aiolia.html">aiolia package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aiolia.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="aiolia.components.html">aiolia.components package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aiolia.pipelines.html">aiolia.pipelines package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="aiolia.utils.html">aiolia.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aiolia.html#module-aiolia">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Aiolia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API Specification</a> &raquo;</li>
+        
+          <li><a href="aiolia.html">aiolia package</a> &raquo;</li>
+        
+          <li><a href="aiolia.utils.html">aiolia.utils package</a> &raquo;</li>
+        
+      <li>aiolia.utils.graph package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/aiolia.utils.graph.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="aiolia-utils-graph-package">
+<h1>aiolia.utils.graph package<a class="headerlink" href="#aiolia-utils-graph-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-aiolia.utils.graph.labeled_graph">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-aiolia.utils.graph.labeled_graph" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aiolia.utils.graph.labeled_graph.LabeledGraph">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.graph.labeled_graph.</span></code><code class="sig-name descname"><span class="pre">LabeledGraph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.utils.graph.labeled_graph.LabeledGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds the logic of automatic DAG creation using labeled data.</p>
+<p>Gets the Sources, Transforms and Sinks and created the desired DAG using the keys
+passed by the user.</p>
+<p>It’s important to notice that this class holds the logic to create the directed
+graph for the pipeline, already instantiating the classes on each node.</p>
+<p>Providing no Sources or no Sinks yields an invalid graph. Passing a cyclic
+structure yields an invalid graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session object provided by the user.</p></li>
+<li><p><strong>sources</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List of Source objects.</p></li>
+<li><p><strong>transforms</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List of Transform objects.</p></li>
+<li><p><strong>sinks</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – list of Sink objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – if the sources or sinks lists are empty.</p></li>
+<li><p><strong>ValueError</strong> – if the created graph contains a cycle (therefore, not a DAG).</p></li>
+<li><p><strong>ValueError</strong> – if an incorrect direction is detected. An incorrect direction
+    can be: transform to a source; sink to a source; sink to a transform.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.utils.graph.labeled_graph.LabeledGraph.dag_path">
+<code class="sig-name descname"><span class="pre">dag_path</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.labeled_graph.LabeledGraph.dag_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>List a topologically sorted DAG path, respecting dependencies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DAG path, each element is a node name.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.labeled_graph.LabeledGraph.edges">
+<code class="sig-name descname"><span class="pre">edges</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.labeled_graph.LabeledGraph.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all edges of the created directed graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of tuples containing the edges.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.labeled_graph.LabeledGraph.get_node_details">
+<code class="sig-name descname"><span class="pre">get_node_details</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#aiolia.utils.graph.labeled_graph.LabeledGraph.get_node_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node details based on its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node_name</strong> (<em>str</em>) – Name of the node.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Key “node_data” contains the node data field; key “ancestors”</dt><dd><p>contains all ancestors of the node; key “descendants” contains all
+descendants of the node.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.labeled_graph.LabeledGraph.paths">
+<code class="sig-name descname"><span class="pre">paths</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.labeled_graph.LabeledGraph.paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all paths of the DAG.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of path lists.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[List[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.utils.graph.unlabeled_graph"></span><dl class="py class">
+<dt id="aiolia.utils.graph.unlabeled_graph.UnlabeledGraph">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.graph.unlabeled_graph.</span></code><code class="sig-name descname"><span class="pre">UnlabeledGraph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.utils.graph.unlabeled_graph.UnlabeledGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds the logic of automatically creating a directed graph based on inputs.</p>
+<p>Gets the Sources, Transforms and Sinks inputs and map them into a graph. Since no
+explicit direction is provided, the graph is created following this logic: each
+Source input is directed to the first transform, if no transform is provided, then
+each Source is directed to each Sink. If Transforms are provided, each transform is
+directed to the next one in the provided order and the last one directs to each
+Sink.
+It’s important to notice that this class holds the logic to create the directed
+graph for the pipeline, already instantiating the classes on each node.
+Providing no Sources or no Sinks yields and invalid graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session object provided by the user.</p></li>
+<li><p><strong>sources</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List of Source objects.</p></li>
+<li><p><strong>transforms</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List of Transform objects.</p></li>
+<li><p><strong>sinks</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – list of Sink objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – if the sources or sinks lists are empty.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.utils.graph.unlabeled_graph.UnlabeledGraph.edges">
+<code class="sig-name descname"><span class="pre">edges</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.unlabeled_graph.UnlabeledGraph.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all edges of the created directed graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of tuples containing the edges.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.unlabeled_graph.UnlabeledGraph.get_node_details">
+<code class="sig-name descname"><span class="pre">get_node_details</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#aiolia.utils.graph.unlabeled_graph.UnlabeledGraph.get_node_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node details based on its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node_name</strong> (<em>str</em>) – Name of the node.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Data field of the node. In this case, will always be a dict.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.unlabeled_graph.UnlabeledGraph.paths">
+<code class="sig-name descname"><span class="pre">paths</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.unlabeled_graph.UnlabeledGraph.paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates all paths from each Source to each Sink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>List of paths. Each path is a list of strings and each</dt><dd><p>string is a node name.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[List[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-aiolia.utils.graph">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aiolia.utils.graph" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aiolia.utils.graph.LabeledGraph">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.graph.</span></code><code class="sig-name descname"><span class="pre">LabeledGraph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.utils.graph.LabeledGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds the logic of automatic DAG creation using labeled data.</p>
+<p>Gets the Sources, Transforms and Sinks and created the desired DAG using the keys
+passed by the user.</p>
+<p>It’s important to notice that this class holds the logic to create the directed
+graph for the pipeline, already instantiating the classes on each node.</p>
+<p>Providing no Sources or no Sinks yields an invalid graph. Passing a cyclic
+structure yields an invalid graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session object provided by the user.</p></li>
+<li><p><strong>sources</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List of Source objects.</p></li>
+<li><p><strong>transforms</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List of Transform objects.</p></li>
+<li><p><strong>sinks</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – list of Sink objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – if the sources or sinks lists are empty.</p></li>
+<li><p><strong>ValueError</strong> – if the created graph contains a cycle (therefore, not a DAG).</p></li>
+<li><p><strong>ValueError</strong> – if an incorrect direction is detected. An incorrect direction
+    can be: transform to a source; sink to a source; sink to a transform.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.utils.graph.LabeledGraph.dag_path">
+<code class="sig-name descname"><span class="pre">dag_path</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.LabeledGraph.dag_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>List a topologically sorted DAG path, respecting dependencies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>DAG path, each element is a node name.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.LabeledGraph.edges">
+<code class="sig-name descname"><span class="pre">edges</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.LabeledGraph.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all edges of the created directed graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of tuples containing the edges.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.LabeledGraph.get_node_details">
+<code class="sig-name descname"><span class="pre">get_node_details</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#aiolia.utils.graph.LabeledGraph.get_node_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node details based on its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node_name</strong> (<em>str</em>) – Name of the node.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Key “node_data” contains the node data field; key “ancestors”</dt><dd><p>contains all ancestors of the node; key “descendants” contains all
+descendants of the node.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.LabeledGraph.paths">
+<code class="sig-name descname"><span class="pre">paths</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.LabeledGraph.paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all paths of the DAG.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of path lists.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[List[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aiolia.utils.graph.UnlabeledGraph">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.utils.graph.</span></code><code class="sig-name descname"><span class="pre">UnlabeledGraph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transforms</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sinks</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.utils.graph.UnlabeledGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds the logic of automatically creating a directed graph based on inputs.</p>
+<p>Gets the Sources, Transforms and Sinks inputs and map them into a graph. Since no
+explicit direction is provided, the graph is created following this logic: each
+Source input is directed to the first transform, if no transform is provided, then
+each Source is directed to each Sink. If Transforms are provided, each transform is
+directed to the next one in the provided order and the last one directs to each
+Sink.
+It’s important to notice that this class holds the logic to create the directed
+graph for the pipeline, already instantiating the classes on each node.
+Providing no Sources or no Sinks yields and invalid graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session object provided by the user.</p></li>
+<li><p><strong>sources</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List of Source objects.</p></li>
+<li><p><strong>transforms</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – List of Transform objects.</p></li>
+<li><p><strong>sinks</strong> (<em>List</em><em>[</em><em>dict</em><em>]</em>) – list of Sink objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – if the sources or sinks lists are empty.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.utils.graph.UnlabeledGraph.edges">
+<code class="sig-name descname"><span class="pre">edges</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.UnlabeledGraph.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all edges of the created directed graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of tuples containing the edges.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[tuple]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.UnlabeledGraph.get_node_details">
+<code class="sig-name descname"><span class="pre">get_node_details</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#aiolia.utils.graph.UnlabeledGraph.get_node_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node details based on its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node_name</strong> (<em>str</em>) – Name of the node.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Data field of the node. In this case, will always be a dict.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aiolia.utils.graph.UnlabeledGraph.paths">
+<code class="sig-name descname"><span class="pre">paths</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#aiolia.utils.graph.UnlabeledGraph.paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates all paths from each Source to each Sink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>List of paths. Each path is a list of strings and each</dt><dd><p>string is a node name.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[List[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="aiolia.utils.exceptions.html" class="btn btn-neutral float-left" title="aiolia.utils.exceptions package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

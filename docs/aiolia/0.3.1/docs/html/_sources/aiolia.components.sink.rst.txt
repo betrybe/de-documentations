@@ -1,0 +1,23 @@
+aiolia.components.sink package
+==============================
+
+Submodules
+----------
+
+.. automodule:: aiolia.components.sink.sink
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.sink.parquet_hive_sink
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: aiolia.components.sink
+   :members:
+   :undoc-members:
+   :show-inheritance:

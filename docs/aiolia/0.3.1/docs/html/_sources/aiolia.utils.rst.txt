@@ -1,0 +1,21 @@
+aiolia.utils package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   aiolia.utils.constants
+   aiolia.utils.decorators
+   aiolia.utils.exceptions
+   aiolia.utils.graph
+
+Module contents
+---------------
+
+.. automodule:: aiolia.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

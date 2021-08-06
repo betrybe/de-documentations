@@ -1,0 +1,49 @@
+aiolia.components package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   aiolia.components.sink
+   aiolia.components.source
+   aiolia.components.transform
+
+
+Submodules
+----------
+
+.. automodule:: aiolia.components.component_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.component
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.data_container
+   :members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.sink_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.source_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.status_container
+   :members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.transform_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:

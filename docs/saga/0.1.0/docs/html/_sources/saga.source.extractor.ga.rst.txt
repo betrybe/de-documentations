@@ -1,0 +1,33 @@
+saga.source.extractor.ga package
+==========================================
+
+Submodules
+----------
+
+.. automodule:: saga.source.extractor.ga.anonymous_id_extractor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.ga.costs_extractor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.ga.customreport
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.extractor.ga.extractor_factory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: saga.source.extractor.ga
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Saga: Modularization and Ease of Use &mdash; Saga  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Source" href="source.html" />
+    <link rel="prev" title="Welcome to API Extraction’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Saga
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Saga: Modularization and Ease of Use</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motivation-and-context">Motivation and Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-architecture">Project Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sink">Sink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-and-use">Configuration and Use</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sink.html">Sink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration and Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Specification</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Saga</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Saga: Modularization and Ease of Use</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/home.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="saga-modularization-and-ease-of-use">
+<h1>Saga: Modularization and Ease of Use<a class="headerlink" href="#saga-modularization-and-ease-of-use" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the Saga documentation! The main purpose of this repository is to provide a modularized and easy-to-use package to extract and load data from Trybe APIs. The main logic of all extractions is located on this repo, making it easy to use and easy to configure on an outside script, outsourcing the configuration and scheduling logic from the main extraction logic.</p>
+<div align="center">
+  <img width="430" height="300" src="https://media1.tenor.com/images/199391b8ec63e7c95311bd38ecae930f/tenor.gif?itemid=16041883">
+</div><section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#motivation-and-context">Motivation and Context</a></p></li>
+<li><p><a class="reference external" href="#project-architecture">Project Architecture</a></p></li>
+<li><p><a class="reference external" href="#source">Source</a></p></li>
+<li><p><a class="reference external" href="#sink">Sink</a></p></li>
+<li><p><a class="reference external" href="#configuration">Configuration</a></p></li>
+</ul>
+</section>
+<section id="motivation-and-context">
+<h2>Motivation and Context<a class="headerlink" href="#motivation-and-context" title="Permalink to this headline">¶</a></h2>
+<p>At the time of this project development, Trybe has multiple external data sources, most of which are APIs and webhooks, and having a Data Lake as a main goal of the data engineering team, the ingestion of all this API data on a well structured and maintained Data Lake is a top priority.</p>
+<p>To reach this objective and centralize all extraction API logic on a single modularized package, this project was created, grouping wrappers around common requests logic and specific API logic.</p>
+<p>Organizing all extraction logic on well separated and documented classes helps to maintain the extraction process and a healthy raw Data Lake layer.</p>
+<p>Data that is best collect by webhooks (like email events) is still being collected and loaded by the Data Collector project (check it out <a class="reference external" href="https://github.com/betrybe/data-collector">here</a>, it’s awesome!), leaving to this project the event collection logic and separating the API batch extraction logic to the API Extraction project.</p>
+</section>
+<section id="project-architecture">
+<h2>Project Architecture<a class="headerlink" href="#project-architecture" title="Permalink to this headline">¶</a></h2>
+<p>This project is based on <code class="docutils literal notranslate"><span class="pre">Source</span></code> and <a class="reference external" href="https://en.wikipedia.org/wiki/Sink_(computing)">Sink</a> concepts, creating a pipeline with continuous data flow from the source API to it’s destination (S3 buckets most of the time), as seen in the image bellow.</p>
+<p><img alt="https://i.imgur.com/gfpUFem.png" src="https://i.imgur.com/gfpUFem.png" /></p>
+<p>Using the Python keyword <code class="docutils literal notranslate"><span class="pre">yield</span></code> it’s possible to create this kind of pipeline using generators, making the implementation cleaner and more optimized for memory in case of heavy loads.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Source</span></code> classes are a bit more complex than the <code class="docutils literal notranslate"><span class="pre">Sink</span></code> classes since they depend on specific API rules and behaviors to extract the source data. One clear example is APIs that use a specific rule for pagination, where other APIs use completely different rules. Besides that, each API has its own set of urls, tokens and paths.</p>
+<p>To make this more generic and modularized, the <code class="docutils literal notranslate"><span class="pre">Source</span></code> classes depend upon a factory that creates concrete <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> objects. These <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> objects implement the actual business logic for the specific API extraction, separated on its own namespaces based on the source API name.</p>
+<p>For example, a hypothetical API called “hypo” is hosted on the domain “https://hypo.api.com” and it has 2 different endpoints: “people” that returns all registered users on the platform and “houses” that returns all “houses” registered in the platform. To extract all data from this API using this project, simply create one <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> class for each endpoint, applying all the specific logic for that endpoint there. Using a <code class="docutils literal notranslate"><span class="pre">Source</span></code> class to get these classes from the factory, you can extract all the data.</p>
+<p>The general architecture of the classes can be seen in the image bellow. It shows, in a simplified manner, how the different components interact with each other using an UML diagram.</p>
+<p><img alt="https://i.imgur.com/LUbfyw1.png" src="https://i.imgur.com/LUbfyw1.png" /></p>
+<p>Following this model, there can be multiple specialized sources as multiple specialized sinks, all depending on the necessity and available APIs.</p>
+</section>
+<section id="source">
+<h2>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+<p>The core logic of the data extraction from APIs is held on the <code class="docutils literal notranslate"><span class="pre">Source</span></code> and <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> classes. It’s possible to see more information about it on the <a class="reference internal" href="source.html"><span class="doc">Source</span></a> page.</p>
+</section>
+<section id="sink">
+<h2>Sink<a class="headerlink" href="#sink" title="Permalink to this headline">¶</a></h2>
+<p>The core logic of the data ingestion is held on the <code class="docutils literal notranslate"><span class="pre">Sink</span></code> classes. It’s possible to see more information about it on the <a class="reference internal" href="sink.html"><span class="doc">Sink</span></a> page.</p>
+</section>
+<section id="configuration-and-use">
+<h2>Configuration and Use<a class="headerlink" href="#configuration-and-use" title="Permalink to this headline">¶</a></h2>
+<p>To configure and use this package, simply follow the steps provided on the <a class="reference internal" href="configuration.html"><span class="doc">Configuration</span></a> page.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="source.html" class="btn btn-neutral float-right" title="Source" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to API Extraction’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

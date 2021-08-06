@@ -1,0 +1,43 @@
+aiolia.components.transform package
+===================================
+
+Submodules
+----------
+
+.. automodule:: aiolia.components.transform.apply_schema_transform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.transform.change_column_name_transform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.transform.column_name_transform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.transform.function_transform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.transform.sql_transform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: aiolia.components.transform.transform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: aiolia.components.transform
+   :members:
+   :undoc-members:
+   :show-inheritance:

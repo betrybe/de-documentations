@@ -1,0 +1,56 @@
+# Saga: Modularization and Ease of Use
+
+Welcome to the Saga documentation! The main purpose of this repository is to provide a modularized and easy-to-use package to extract and load data from Trybe APIs. The main logic of all extractions is located on this repo, making it easy to use and easy to configure on an outside script, outsourcing the configuration and scheduling logic from the main extraction logic.
+
+<div align="center">
+  <img width="430" height="300" src="https://media1.tenor.com/images/199391b8ec63e7c95311bd38ecae930f/tenor.gif?itemid=16041883">
+</div>
+
+## Table of Contents
+- [Motivation and Context](#motivation-and-context)
+- [Project Architecture](#project-architecture)
+- [Source](#source)
+- [Sink](#sink)
+- [Configuration](#configuration)
+
+## Motivation and Context
+
+At the time of this project development, Trybe has multiple external data sources, most of which are APIs and webhooks, and having a Data Lake as a main goal of the data engineering team, the ingestion of all this API data on a well structured and maintained Data Lake is a top priority.
+
+To reach this objective and centralize all extraction API logic on a single modularized package, this project was created, grouping wrappers around common requests logic and specific API logic.
+
+Organizing all extraction logic on well separated and documented classes helps to maintain the extraction process and a healthy raw Data Lake layer.
+
+Data that is best collect by webhooks (like email events) is still being collected and loaded by the Data Collector project (check it out [here](https://github.com/betrybe/data-collector), it's awesome!), leaving to this project the event collection logic and separating the API batch extraction logic to the API Extraction project.
+
+## Project Architecture
+
+This project is based on `Source` and [Sink](https://en.wikipedia.org/wiki/Sink_(computing)) concepts, creating a pipeline with continuous data flow from the source API to it's destination (S3 buckets most of the time), as seen in the image bellow.
+
+![](https://i.imgur.com/gfpUFem.png)
+
+Using the Python keyword `yield` it's possible to create this kind of pipeline using generators, making the implementation cleaner and more optimized for memory in case of heavy loads.
+
+The `Source` classes are a bit more complex than the `Sink` classes since they depend on specific API rules and behaviors to extract the source data. One clear example is APIs that use a specific rule for pagination, where other APIs use completely different rules. Besides that, each API has its own set of urls, tokens and paths.
+
+To make this more generic and modularized, the `Source` classes depend upon a factory that creates concrete `Extractor` objects. These `Extractor` objects implement the actual business logic for the specific API extraction, separated on its own namespaces based on the source API name.
+
+For example, a hypothetical API called "hypo" is hosted on the domain "https://hypo.api.com" and it has 2 different endpoints: "people" that returns all registered users on the platform and "houses" that returns all "houses" registered in the platform. To extract all data from this API using this project, simply create one `Extractor` class for each endpoint, applying all the specific logic for that endpoint there. Using a `Source` class to get these classes from the factory, you can extract all the data.
+
+The general architecture of the classes can be seen in the image bellow. It shows, in a simplified manner, how the different components interact with each other using an UML diagram.
+
+![](https://i.imgur.com/LUbfyw1.png)
+
+Following this model, there can be multiple specialized sources as multiple specialized sinks, all depending on the necessity and available APIs.
+
+## Source
+
+The core logic of the data extraction from APIs is held on the `Source` and `Extractor` classes. It's possible to see more information about it on the [Source](source.md) page.
+
+## Sink
+
+The core logic of the data ingestion is held on the `Sink` classes. It's possible to see more information about it on the [Sink](sink.md) page.
+
+## Configuration and Use
+
+To configure and use this package, simply follow the steps provided on the [Configuration](configuration.md) page.

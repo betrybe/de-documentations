@@ -1,0 +1,46 @@
+saga.source package
+=============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   saga.source.extractor
+
+Submodules
+----------
+
+.. automodule:: saga.source.ga_source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.hubspot_source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.mindsight_source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.typeform_source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: saga.source.source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: saga.source
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -28,7 +28,7 @@ style-check:
 	@echo "Code Style"
 	@echo "=========="
 	@echo ""
-	@python -m black --check -t py36 --exclude="build/|buck-out/|dist/|_build/|pip/|\.pip/|\.git/|\.hg/|\.mypy_cache/|\.tox/|\.venv/" . && echo "\n\nSuccess" || (echo "\n\nFailure\n\nRun \"make black\" to apply style formatting to your code"; return 2)
+	@python -m black --check -t py38 --exclude="build/|buck-out/|dist/|_build/|pip/|\.pip/|\.git/|\.hg/|\.mypy_cache/|\.tox/|\.venv/" . && echo "\n\nSuccess" || (echo "\n\nFailure\n\nRun \"make black\" to apply style formatting to your code"; return 2)
 	@echo ""
 
 .PHONY: check-flake8
@@ -37,7 +37,7 @@ check-flake8:
 	@echo "Flake 8"
 	@echo "======="
 	@echo ""
-	@-python -m flake8 docs_framework/ && echo "docs_framework module success"
+	@-python -m flake8 docs/ && echo "docs module success"
 	@-python -m flake8 tests/ && echo "tests module success"
 	@echo ""
 
@@ -53,13 +53,13 @@ checks:
 
 .PHONY: black
 black:
-	@python -m black -t py36 --exclude="build/|buck-out/|dist/|_build/|pip/|\.pip/|\.git/|\.hg/|\.mypy_cache/|\.tox/|\.venv/" .
+	@python -m black -t py38 --exclude="build/|buck-out/|dist/|_build/|pip/|\.pip/|\.git/|\.hg/|\.mypy_cache/|\.tox/|\.venv/" .
 
 ## Tests
 
 .PHONY: tests
 tests:
-	@python3 -m pytest --cov-branch --cov-report term-missing --cov=docs_framework tests/
+	@python3 -m pytest --cov-branch --cov-report term-missing --cov=de-documentations tests/
 
 ## Build wheel
 

@@ -1,0 +1,20 @@
+aiolia package
+==============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   aiolia.components
+   aiolia.pipelines
+   aiolia.utils
+
+Module contents
+---------------
+
+.. automodule:: aiolia
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,26 @@
+# Source
+
+The `Source` objects control the data flow from the extractors to the `Sink` objects. There are 3 main responsibilities to a source class that implements the `Source` interface:
+- Implement the `produce()` method to generate the data to the Sink
+- Generate the main data inside a dictionary using the key `data`
+- Generate the metadata on the `produce()` with 3 must have keys:
+    - `source_api`: string that indicates the name of the API where the data is coming from, "hubspot" for example
+    - `data_source`: name of the endpoint/path/object of the API that is being extracted, "companies" for example
+    - `produce_date`: date when the data was extracted
+
+It's necessary to generate these metadata for the ingestion process at the `Sink` module. With these 3, it's possible to identify the source name and date produce to correctly classify the raw data on the Data Lake.
+
+A simple `produce()` method looks like this:
+
+```python
+def produce(self):
+    for data in self.extractor.produce():
+        yield {
+            "data": data,
+            "source_api": "hubspot",
+            "data_source": "companies",
+            "produce_date": "2021-01-01"
+        }
+```
+
+Simply put, the easiest way is to iterate over the generator provided by the extractor and generate a dictionary with the data and metadata.

@@ -1,0 +1,801 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>aiolia.components.transform package &mdash; Aiolia 0.2.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aiolia.pipelines package" href="aiolia.pipelines.html" />
+    <link rel="prev" title="aiolia.components.source package" href="aiolia.components.source.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Aiolia
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API Specification</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aiolia.html">aiolia package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aiolia.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="aiolia.components.html">aiolia.components package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aiolia.pipelines.html">aiolia.pipelines package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aiolia.utils.html">aiolia.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aiolia.html#module-aiolia">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Aiolia</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">API Specification</a> &raquo;</li>
+        
+          <li><a href="aiolia.html">aiolia package</a> &raquo;</li>
+        
+          <li><a href="aiolia.components.html">aiolia.components package</a> &raquo;</li>
+        
+      <li>aiolia.components.transform package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/aiolia.components.transform.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="aiolia-components-transform-package">
+<h1>aiolia.components.transform package<a class="headerlink" href="#aiolia-components-transform-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-aiolia.components.transform.apply_schema_transform">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-aiolia.components.transform.apply_schema_transform" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aiolia.components.transform.apply_schema_transform.ApplySchemaTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.apply_schema_transform.</span></code><code class="sig-name descname"><span class="pre">ApplySchemaTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.apply_schema_transform.ApplySchemaTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Apply the desired schema to the dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>schema</strong> (<em>str</em><em>, </em><em>optional</em>) – Spark style schema, written in json to be
+converted to a proper schema object. Needs to be a path to a file
+containing the schema in json format. Defaults to None.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary containing extra details for the
+pipeline execution. Some execution flows need some specific configs to
+work correctly, like “temp_table_name” key for the SQLTransform use.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.apply_schema_transform.ApplySchemaTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.apply_schema_transform.ApplySchemaTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the schema to the df in the container.</p>
+<p>Expects one DataContainer and will only use the first DataContainer of the list
+since this is not an aggregation transformation.</p>
+<p>This transform has the following possibilities to process: exact schema match;
+df with more columns than passed schema; schema with more columns than passed
+df; type mismatch between schemas.</p>
+<p>With an exact schema match, just reorder the columns in the right order and
+return the result.</p>
+<p>When the df has more columns than the passed schema, ignore the extra columns
+and return the result.</p>
+<p>When the schema has more columns than the df, raise an error.</p>
+<p>When there is a type mismatch with no casting possibilities, raise an error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – List of DataContainers, where only the
+first one will be used.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.utils.exceptions.html#aiolia.utils.exceptions.sql.InvalidSchema" title="aiolia.utils.exceptions.sql.InvalidSchema"><strong>InvalidSchema</strong></a> – if no schema is provided or if there is a schema
+    mismatch. A schema mismatch can be different columns and different
+    column types.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>DataContainer with the applied schema and the execution</dt><dd><p>status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.components.transform.change_column_name_transform"></span><dl class="py class">
+<dt id="aiolia.components.transform.change_column_name_transform.ChangeColumnNameTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.change_column_name_transform.</span></code><code class="sig-name descname"><span class="pre">ChangeColumnNameTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_mapping</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.change_column_name_transform.ChangeColumnNameTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Class to change column names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>column_mapping</strong> (<em>dict</em>) – Dictionary to map the original name of the column to its
+new name. For example: {“id”: “user_id”, “date”: “creation_date”} changes
+column “id” to “user_id” and the column “date” to “creation_date”. The
+change is only to the name, not to the type or the data itself.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary containing extra details for the
+pipeline execution. Some execution flows need some specific configs to
+work correctly, like “temp_table_name” key for the SQLTransform use.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.change_column_name_transform.ChangeColumnNameTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.change_column_name_transform.ChangeColumnNameTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the column name mapping to the input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – List of DataContainers, where only the
+first one will be used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>DataContainer with the applied schema and the execution</dt><dd><p>status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.components.transform.column_name_transform"></span><dl class="py class">
+<dt id="aiolia.components.transform.column_name_transform.ColumnNameTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.column_name_transform.</span></code><code class="sig-name descname"><span class="pre">ColumnNameTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.column_name_transform.ColumnNameTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Fixes all column names of a dataframe.</p>
+<p>Standardize column names to lower case, separated by underscore and with no
+special characters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary containing extra details for the
+pipeline execution. Some execution flows need some specific configs to
+work correctly, like “temp_table_name” key for the SQLTransform use.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.column_name_transform.ColumnNameTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.column_name_transform.ColumnNameTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the column names on the dataframe.</p>
+<p>Expects one DataContainer and will only use the first DataContainer of the
+list since this is not an aggregate transformation.</p>
+<p>To clean the column names, first run the “unidecode” method to remove any non
+ascii character, then remove anything that isn’t a letter, underscore or blank
+space. After this is done, the resulting string is composed of letters, blank
+spaces and underscores and with this, replace the underscores with blank spaces
+and than remove the leading and trailing spaces. The result is a string with
+no leading and trailing spaces and with no characters other than letters and
+blank spaces. For the final step, all groups of contiguous blank spaces are
+replaced with one underscore and all letters are converted to lowercase.</p>
+<p>With this, all columns will follow the same pattern of only lowercase letters,
+no trailing and leading spaces and words separated by underscores.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – List of DataContainers, where only the
+first one will be used, transformed and outputted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>DataContainer with the transformed data and the final</dt><dd><p>execution status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.components.transform.function_transform"></span><dl class="py class">
+<dt id="aiolia.components.transform.function_transform.FunctionTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.function_transform.</span></code><code class="sig-name descname"><span class="pre">FunctionTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_source_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">pyspark.sql.session.SparkSession</span><span class="p"><span class="pre">,</span> </span><span class="pre">pyspark.sql.dataframe.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">pyspark.sql.dataframe.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_func_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.function_transform.FunctionTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Executes an user defined Python function that acts over the input dataframes.</p>
+<p>The user needs to define a Python function with two required arguments:
+“spark_session” and “containers” in this exact order. After defining these two,
+the user can define any number of extra arguments as he wishes, as long as they
+are provided as kwargs.</p>
+<p>There are two options to pass the function: directly pass the function object
+or point to the package path that contains the file with the function. If the
+user decides to directly provide the function object, the function from the
+external file path will be overwritten.</p>
+<p>If a function from an external file is provided, it’s important to notice that
+the file needs to be in the system path of the same workspace. For example, if
+the file is located outside of the current base path, the file will need to be
+in the path. The last thing to be aware of is the folder structure of the
+external file. Since this class imports the function using the <cite>importlib</cite>
+module, the folder structure of the external class must be populated with
+<cite>__init__.py</cite> files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>func_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the function to import from the external
+file. Defaults to None.</p></li>
+<li><p><strong>func_source_file</strong> (<em>str</em><em>, </em><em>optional</em>) – Relative import path of the external
+function file. Must be a valid import path, <cite>external.path.file</cite> for
+example. Defaults to None.</p></li>
+<li><p><strong>transform_func</strong> (<em>Callable</em><em>[</em><em>[</em><em>SparkSession</em><em>, </em><em>DataFrame</em><em>]</em><em>, </em><em>DataFrame</em><em>]</em><em>, </em><em>optional</em>) – Function object. Defaults to None.</p></li>
+<li><p><strong>transform_func_args</strong> (<em>dict</em><em>, </em><em>optional</em>) – Keyword arguments to be used by the
+function. Defaults to None.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Extra details for the pipeline execution.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.function_transform.FunctionTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.function_transform.FunctionTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes the function provided by the user and returns the result.</p>
+<p>The function acts upon the container list an results in a dataframe. The df is
+returned inside a new DataContainer with the complete merged execution history
+of the input containers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – List of DataContainers to be used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>DataContainer with the transformed data and the final</dt><dd><p>execution status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.components.transform.sql_transform"></span><dl class="py class">
+<dt id="aiolia.components.transform.sql_transform.SQLTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.sql_transform.</span></code><code class="sig-name descname"><span class="pre">SQLTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.sql_transform.SQLTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Executes the desired query based on the inputs.</p>
+<p>Transforms the input data using a defined user query. The query must only use
+the input tables, if a table that is not specified in the inputs is used by the
+query, and error is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>query</strong> (<em>str</em>) – Transform query provided by the user. The user can pass a
+plain text query or a path to a .sql file, any other file format will
+raise an error.</p></li>
+<li><p><strong>is_file</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates if the “query” arg is a plain text
+query or a path to a file containing the query.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary containing extra details for the
+pipeline execution. Some execution flows need some specific configs to
+work correctly, like “temp_table_name” key for the SQLTransform use.
+Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – if a file is passed with an extension different from “.sql”.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.sql_transform.SQLTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.sql_transform.SQLTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the desired user query.</p>
+<p>The input tables are transformed into temp tables using the name specified in
+the key “temp_table_name” in the details attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – Input data containers.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.utils.exceptions.html#aiolia.utils.exceptions.sql.InvalidTablesException" title="aiolia.utils.exceptions.sql.InvalidTablesException"><strong>InvalidTablesException</strong></a> – if the query is using tables that don’t come from
+    the defined sources, this exception is raised.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>DataContainer with the transformed data and the final</dt><dd><p>execution status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-aiolia.components.transform.transform"></span><dl class="py class">
+<dt id="aiolia.components.transform.transform.Transform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.transform.</span></code><code class="sig-name descname"><span class="pre">Transform</span></code><a class="headerlink" href="#aiolia.components.transform.transform.Transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="aiolia.components.html#aiolia.components.component.Component" title="aiolia.components.component.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.component.Component</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-aiolia.components.transform">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aiolia.components.transform" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aiolia.components.transform.ApplySchemaTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.</span></code><code class="sig-name descname"><span class="pre">ApplySchemaTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.ApplySchemaTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Apply the desired schema to the dataframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>schema</strong> (<em>str</em><em>, </em><em>optional</em>) – Spark style schema, written in json to be
+converted to a proper schema object. Needs to be a path to a file
+containing the schema in json format. Defaults to None.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary containing extra details for the
+pipeline execution. Some execution flows need some specific configs to
+work correctly, like “temp_table_name” key for the SQLTransform use.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.ApplySchemaTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.ApplySchemaTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the schema to the df in the container.</p>
+<p>Expects one DataContainer and will only use the first DataContainer of the list
+since this is not an aggregation transformation.</p>
+<p>This transform has the following possibilities to process: exact schema match;
+df with more columns than passed schema; schema with more columns than passed
+df; type mismatch between schemas.</p>
+<p>With an exact schema match, just reorder the columns in the right order and
+return the result.</p>
+<p>When the df has more columns than the passed schema, ignore the extra columns
+and return the result.</p>
+<p>When the schema has more columns than the df, raise an error.</p>
+<p>When there is a type mismatch with no casting possibilities, raise an error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – List of DataContainers, where only the
+first one will be used.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.utils.exceptions.html#aiolia.utils.exceptions.sql.InvalidSchema" title="aiolia.utils.exceptions.sql.InvalidSchema"><strong>InvalidSchema</strong></a> – if no schema is provided or if there is a schema
+    mismatch. A schema mismatch can be different columns and different
+    column types.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>DataContainer with the applied schema and the execution</dt><dd><p>status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aiolia.components.transform.ChangeColumnNameTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.</span></code><code class="sig-name descname"><span class="pre">ChangeColumnNameTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_mapping</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.ChangeColumnNameTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Class to change column names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>column_mapping</strong> (<em>dict</em>) – Dictionary to map the original name of the column to its
+new name. For example: {“id”: “user_id”, “date”: “creation_date”} changes
+column “id” to “user_id” and the column “date” to “creation_date”. The
+change is only to the name, not to the type or the data itself.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary containing extra details for the
+pipeline execution. Some execution flows need some specific configs to
+work correctly, like “temp_table_name” key for the SQLTransform use.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.ChangeColumnNameTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.ChangeColumnNameTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the column name mapping to the input data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – List of DataContainers, where only the
+first one will be used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>DataContainer with the applied schema and the execution</dt><dd><p>status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aiolia.components.transform.ColumnNameTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.</span></code><code class="sig-name descname"><span class="pre">ColumnNameTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.ColumnNameTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Fixes all column names of a dataframe.</p>
+<p>Standardize column names to lower case, separated by underscore and with no
+special characters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary containing extra details for the
+pipeline execution. Some execution flows need some specific configs to
+work correctly, like “temp_table_name” key for the SQLTransform use.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.ColumnNameTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.ColumnNameTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the column names on the dataframe.</p>
+<p>Expects one DataContainer and will only use the first DataContainer of the
+list since this is not an aggregate transformation.</p>
+<p>To clean the column names, first run the “unidecode” method to remove any non
+ascii character, then remove anything that isn’t a letter, underscore or blank
+space. After this is done, the resulting string is composed of letters, blank
+spaces and underscores and with this, replace the underscores with blank spaces
+and than remove the leading and trailing spaces. The result is a string with
+no leading and trailing spaces and with no characters other than letters and
+blank spaces. For the final step, all groups of contiguous blank spaces are
+replaced with one underscore and all letters are converted to lowercase.</p>
+<p>With this, all columns will follow the same pattern of only lowercase letters,
+no trailing and leading spaces and words separated by underscores.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – List of DataContainers, where only the
+first one will be used, transformed and outputted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>DataContainer with the transformed data and the final</dt><dd><p>execution status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aiolia.components.transform.FunctionTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.</span></code><code class="sig-name descname"><span class="pre">FunctionTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_source_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">pyspark.sql.session.SparkSession</span><span class="p"><span class="pre">,</span> </span><span class="pre">pyspark.sql.dataframe.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">pyspark.sql.dataframe.DataFrame</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_func_args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.FunctionTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Executes an user defined Python function that acts over the input dataframes.</p>
+<p>The user needs to define a Python function with two required arguments:
+“spark_session” and “containers” in this exact order. After defining these two,
+the user can define any number of extra arguments as he wishes, as long as they
+are provided as kwargs.</p>
+<p>There are two options to pass the function: directly pass the function object
+or point to the package path that contains the file with the function. If the
+user decides to directly provide the function object, the function from the
+external file path will be overwritten.</p>
+<p>If a function from an external file is provided, it’s important to notice that
+the file needs to be in the system path of the same workspace. For example, if
+the file is located outside of the current base path, the file will need to be
+in the path. The last thing to be aware of is the folder structure of the
+external file. Since this class imports the function using the <cite>importlib</cite>
+module, the folder structure of the external class must be populated with
+<cite>__init__.py</cite> files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>func_name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the function to import from the external
+file. Defaults to None.</p></li>
+<li><p><strong>func_source_file</strong> (<em>str</em><em>, </em><em>optional</em>) – Relative import path of the external
+function file. Must be a valid import path, <cite>external.path.file</cite> for
+example. Defaults to None.</p></li>
+<li><p><strong>transform_func</strong> (<em>Callable</em><em>[</em><em>[</em><em>SparkSession</em><em>, </em><em>DataFrame</em><em>]</em><em>, </em><em>DataFrame</em><em>]</em><em>, </em><em>optional</em>) – Function object. Defaults to None.</p></li>
+<li><p><strong>transform_func_args</strong> (<em>dict</em><em>, </em><em>optional</em>) – Keyword arguments to be used by the
+function. Defaults to None.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Extra details for the pipeline execution.
+Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.FunctionTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.FunctionTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes the function provided by the user and returns the result.</p>
+<p>The function acts upon the container list an results in a dataframe. The df is
+returned inside a new DataContainer with the complete merged execution history
+of the input containers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – List of DataContainers to be used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>DataContainer with the transformed data and the final</dt><dd><p>execution status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aiolia.components.transform.SQLTransform">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aiolia.components.transform.</span></code><code class="sig-name descname"><span class="pre">SQLTransform</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component_pipeline_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spark_session</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pyspark.sql.session.SparkSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">details</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.SQLTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aiolia.components.transform.transform.Transform" title="aiolia.components.transform.transform.Transform"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiolia.components.transform.transform.Transform</span></code></a></p>
+<p>Executes the desired query based on the inputs.</p>
+<p>Transforms the input data using a defined user query. The query must only use
+the input tables, if a table that is not specified in the inputs is used by the
+query, and error is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component_pipeline_name</strong> (<em>str</em>) – Name of this component in the pipeline.</p></li>
+<li><p><strong>spark_session</strong> (<em>SparkSession</em>) – Spark session provided by the user.</p></li>
+<li><p><strong>query</strong> (<em>str</em>) – Transform query provided by the user. The user can pass a
+plain text query or a path to a .sql file, any other file format will
+raise an error.</p></li>
+<li><p><strong>is_file</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates if the “query” arg is a plain text
+query or a path to a file containing the query.</p></li>
+<li><p><strong>details</strong> (<em>dict</em><em>, </em><em>optional</em>) – Dictionary containing extra details for the
+pipeline execution. Some execution flows need some specific configs to
+work correctly, like “temp_table_name” key for the SQLTransform use.
+Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – if a file is passed with an extension different from “.sql”.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="aiolia.components.transform.SQLTransform.execute">
+<code class="sig-name descname"><span class="pre">execute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiolia.components.transform.SQLTransform.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the desired user query.</p>
+<p>The input tables are transformed into temp tables using the name specified in
+the key “temp_table_name” in the details attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>containers</strong> (<em>List</em><em>[</em><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer"><em>DataContainer</em></a><em>]</em>) – Input data containers.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.utils.exceptions.html#aiolia.utils.exceptions.sql.InvalidTablesException" title="aiolia.utils.exceptions.sql.InvalidTablesException"><strong>InvalidTablesException</strong></a> – if the query is using tables that don’t come from
+    the defined sources, this exception is raised.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>DataContainer with the transformed data and the final</dt><dd><p>execution status (if the execution succeeded).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="aiolia.components.html#aiolia.components.data_container.DataContainer" title="aiolia.components.data_container.DataContainer">DataContainer</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="aiolia.pipelines.html" class="btn btn-neutral float-right" title="aiolia.pipelines package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="aiolia.components.source.html" class="btn btn-neutral float-left" title="aiolia.components.source package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Data Engineers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
